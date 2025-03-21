@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #b51561; /* Adjusted to be softer in light mode */
+  --background-color: #fdf6f8; /* Light pinkish-white */
+  --secondary-bg: #fbe6ec; /* Softer pink for secondary backgrounds */
+  --text-color: #3b0c1a; /* Dark text for readability */
+  --secondary-text: #7a4f54; /* A slightly faded dark pink */
+  --card-bg: #fbe6ec; /* Light pinkish tone */
+  --border-color: #d48fa3; /* Softer border color */
+  --button-bg: #e41b7c; /* Keeping the vibrant button */
+  --button-hover: #b51561; /* Darker for hover effect */
+  --highlight-text: #e41b7c; /* Accent color remains */
+  --link-color: #e41b7c; /* Keeping links vibrant */
+  --link-hover: #b51561; /* Darker pink for hover */
+  --price-color: #cc9900; /* Adjusted gold tone */
+  --discount-price: #d32f2f; /* Red for urgency */
+  --success-color: #198754; /* Green for success */
+  --warning-color: #ffaa00; /* Yellow for warning */
+  --error-color: #b00020; /* Red for errors */
+  --placeholder-color: #7a4f54; /* Muted input placeholder */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Lighter shadow for soft depth */
+}
