@@ -1,0 +1,71 @@
+.tabbar {
+  position: fixed;
+  bottom: 0vh;
+  background: var(--background-color);
+  height: 7vh;
+  width: 100%;
+  display: none;
+  z-index: 5;
+  left: 0vh;
+}
+@media (max-width: 768px) {
+  .tabbar {
+    display: flex;
+    font-size: 2vh;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.04) 3px 5px 0px;
+    align-items: center;
+  }
+  .block {
+    height: 100%;
+    width: 25%;
+    padding: 0.5vh 2vh;
+    border-radius: 2vh;
+    transition: 0.2s ease-in-out;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .block {
+    position: relative;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vh;
+  }
+
+  .lebel {
+    font-size: 1.5vh;
+    color: var(--text-color);
+  }
+  .icon {
+    color: var(--text-color);
+  }
+
+  .block:hover {
+    color: #e41b7b;
+    font-size: 3vh;
+  }
+  .indicator {
+    position: absolute;
+    top: 0;
+    height: 3px; /* Bar thickness */
+    width: 25%; /* Default width */
+    transition: 0.3s ease-in-out;
+    border-radius: 3px;
+    background: #e41b7b; /* Initial color */
+  }
+  /* Move the indicator when hovering */
+  .block:hover ~ .indicator {
+    left: var(--left-pos, 0);
+    width: var(--width, 10vh);
+  }
+}

@@ -1,0 +1,76 @@
+.sliderContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+}
+
+.slider {
+  display: flex;
+  width: auto; /* Ensure it holds all slides */
+  transition: transform 0.5s ease-in-out; /* Smooth right-to-left animation */
+  flex-direction: row;
+}
+
+.slide {
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5vh;
+
+  border-radius: 1vh;
+}
+
+.imgBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh; /* Adjust height as needed */
+  box-sizing: border-box;
+  width: 48%;
+}
+
+.imgBox img {
+  border-radius: 1vh;
+  max-width: 100%;
+  background: white;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.indicators {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sliderContainer {
+    height: fit-content; /* Adjust height for tablets */
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+}

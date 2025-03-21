@@ -1,0 +1,233 @@
+.filter {
+  display: none;
+}
+@media (max-width: 768px) {
+  .filter {
+    width: 100vw;
+    height: 100svh;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: -2px 0 10px var(--shadow-color);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    margin-bottom: 0svh;
+    transform: translateY(0); /* Start hidden */
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .filter.show {
+    transform: translateY(0); /* Slide up */
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .filter.hide {
+    transform: translateY(100%); /* Slide down */
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  /* Disable scrolling when filter is open */
+  .no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .filter.open {
+    transform: translateX(0);
+  }
+
+  .heading {
+    font-size: 1vh;
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh;
+    color: var(--text-color);
+  }
+  .heading h1:nth-child(2) {
+    color: var(--primary-color);
+  }
+  .middle {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+    height: 70%;
+    padding-top: 2vh;
+    position: relative;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: row;
+  }
+
+  .size {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .search {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border-color);
+    padding: 1vh;
+    position: absolute;
+    background: var(--background-color);
+    right: 15;
+    width: 50%;
+    z-index: 5;
+  }
+
+  .search i {
+    color: var(--secondary-text);
+  }
+
+  .search input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border: 0.5px solid var(--border-color);
+
+    overflow-y: scroll; /* Ensures smooth scrolling */
+    white-space: nowrap; /* Prevents wrapping */
+    scrollbar-width: thin; /* Makes the scrollbar smaller */
+  }
+
+  .h1 {
+    font-size: 2vh;
+    height: 4vh;
+    background: var(--card-bg);
+    font-weight: 300;
+    color: var(--secondary-text);
+    padding: 3vh 1vh;
+    border-top: 0.5px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .h1::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: crimson;
+    opacity: 0;
+
+    border-radius: 50%;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+
+  .h1:hover::before {
+    animation: clickanim 0.3s ease-in-out;
+  }
+
+  @keyframes clickanim {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-height: 100%; /* Ensures it does not overflow */
+    overflow-y: scroll; /* Ensures vertical scrolling */
+    scrollbar-width: thin; /* Makes the scrollbar smaller */
+    padding-right: 2vh;
+  }
+  .optionBox {
+    margin-top: 5vh;
+  }
+  .option {
+    display: flex;
+    height: 5vh;
+    align-items: center;
+    gap: 1.5vh;
+    border-top: 0.5px solid var(--border-color);
+    border-right: 0.5px solid var(--border-color);
+    cursor: pointer;
+    padding-left: 1.5vh;
+    transition: background 0.3s;
+    font-size: 2vh;
+    font-weight: 400;
+  }
+
+  .option {
+    color: var(--text-color);
+  }
+  .option h1 {
+    font-size: 2vh;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+  .option:hover {
+    background: #f0f0f0;
+  }
+
+  .tab {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5vh;
+    border-top: 1px solid var(--border-color);
+    height: 7vh;
+    background: var(--secondary-bg);
+  }
+
+  .buttons {
+    flex: 1;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    background: var(--secondary-bg);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+
+  .buttons:last-child {
+    color: var(--primary-color);
+    font-weight: 700;
+    border-left: 0.5px solid var(--border-color);
+  }
+
+  .buttons:last-child:hover {
+    color: var(--link-hover);
+  }
+}

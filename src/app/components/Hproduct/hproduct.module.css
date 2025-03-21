@@ -1,0 +1,201 @@
+.card {
+  display: flex;
+  overflow: hidden;
+  width: 15%;
+  /* Adjust width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  height: 30vw;
+  gap: 0.5vh;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Left Side - Image */
+.imageContainer {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 2vw;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* Discount Badge */
+.badge {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 5px 8px;
+}
+
+/* Right Side - Content */
+.content {
+  width: 100%;
+  gap: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--highlight-text);
+  margin-bottom: 5px;
+
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+.para {
+  text-align: left;
+  font-size: 2vh;
+  color: var(--text-color);
+}
+/* Rating */
+.rating {
+  display: flex;
+  font-size: 14px;
+  color: #ffcc00;
+  margin-bottom: 8px;
+  position: absolute;
+}
+
+/* Price Section */
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.actualPrice {
+  font-size: 18px;
+  font-weight: bold;
+  color: #73b0a9;
+}
+
+.crossedPrice {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: var(--secondary-text);
+}
+
+/* Stock Status *
+
+/* Buttons */
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.addToCart {
+  color: var(--card-bg);
+  border-radius: 5vh;
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--highlight-text);
+}
+
+.addToCart:hover {
+  background: var(--button-hover);
+  color: white;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .card {
+    width: 45%;
+    height: 45vh;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 80%;
+    border-radius: 1vh;
+    overflow: hidden;
+  }
+
+  .content {
+    width: 100%;
+    text-align: center;
+  }
+  .title {
+    font-size: 2vh;
+    font-weight: bold;
+    color: var(--highlight-text);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+
+    width: 100%;
+    display: flex;
+    justify-content: left;
+  }
+  .para {
+    text-align: left;
+    font-size: 1.5vh;
+  }
+
+  .buttonContainer {
+    justify-content: center;
+    font-size: 1vh;
+  }
+  .button {
+    font-size: 1.5vh;
+  }
+  .rating {
+    display: flex;
+    font-size: 1.5vh;
+    color: #ffcc00;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .priceContainer {
+    flex-direction: row;
+  }
+  .actualPrice {
+    display: flex;
+    align-items: center;
+    font-size: 2vh;
+    color: #e41b7b;
+  }
+
+  .stockStatus {
+    text-align: left;
+    font-weight: 300;
+  }
+}

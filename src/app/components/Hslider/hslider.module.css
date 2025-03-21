@@ -1,0 +1,10 @@
+.hslider {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+
+  padding: 2vh;
+}
+.hslider {
+  gap: 1vh;
+}

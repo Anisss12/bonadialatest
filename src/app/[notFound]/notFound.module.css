@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #ffffff; /* Adjust background color to match your website */
+  color: #333333; /* Adjust text color to match your website */
+}
+
+.title {
+  font-size: 8rem; /* Adjust font size to match your website */
+  font-weight: 700; /* Adjust font weight to match your website */
+  margin: 0;
+  color: #e41b7b; /* Adjust color to match your website's primary color */
+}
+
+.message {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #666666; /* Adjust color to match your website's secondary text color */
+}
+
+.homeLink {
+  font-size: 1.2rem;
+  color: #ffffff; /* Adjust text color to match your website */
+  text-decoration: none;
+  background-color: #e41b7b; /* Adjust background color to match your website's primary color */
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.homeLink:hover {
+  background-color: #c2185b; /* Adjust hover background color to match your website */
+  color: #ffffff; /* Ensure text color remains readable on hover */
+}

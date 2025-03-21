@@ -1,0 +1,151 @@
+.searches {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--background-color);
+  height: 100svh;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  align-items: center;
+  background: var(--background-color);
+  padding: 1vh;
+  box-shadow: 0 4px 8px var(--shadow-color); /* Added box shadow */
+}
+
+.searchBar input {
+  width: 70%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  background: var(--secondary-bg);
+}
+.searchBar input::placeholder {
+  color: var(--secondary-text);
+}
+.wishlisted {
+  margin-top: 30px;
+  padding: 2vh;
+  background: var(--secondary-bg);
+}
+
+.wishcards {
+  height: 100%;
+  padding-top: 2vh;
+}
+
+.recntSearchh5,
+.wishlisted h5 {
+  font-size: 1.5vh;
+  padding: 2vh;
+  background: var(--secondary-bg);
+  color: var(--highlight-text);
+}
+
+.recentSearchContainer {
+  background: var(--secondary-bg);
+  padding: 2vh;
+  display: flex;
+  gap: 1vh;
+  flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  scrollbar-color: #ccc transparent;
+  color: var(--text-color);
+}
+
+.recentSearchContainer::-webkit-scrollbar {
+  display: none;
+  height: 5px;
+}
+
+.recentSearchContainer::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+  display: none;
+}
+
+.recentSearchContainer::-webkit-scrollbar-track {
+  background: transparent;
+  display: none;
+}
+
+.circleCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 2vh;
+}
+
+.circleCard img {
+  width: 10vh;
+  height: 10vh;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.5px solid var(--border-color);
+}
+
+.circleCard h2 {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.wishcards {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  scrollbar-color: #ccc transparent;
+}
+
+.wishcards > * {
+  flex: 0 0 auto;
+  width: 200px; /* Ensuring a fixed width for each card */
+}
+
+.wishcards::-webkit-scrollbar {
+  height: 5px;
+}
+
+.wishcards::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.wishcards::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .searchBar input {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .circleCard {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circleCard img {
+    width: 10vh;
+    height: 10vh;
+  }
+
+  .circleCard h2 {
+    font-size: 12px;
+  }
+}

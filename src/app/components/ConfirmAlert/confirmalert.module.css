@@ -1,0 +1,70 @@
+.confirm {
+  position: fixed;
+
+  width: 100%;
+  height: fit-content;
+  background: var(--background-color);
+  z-index: 5;
+  padding: 2vh;
+  transition: 0.3s ease-in;
+  animation: appear 0.3s ease forwards;
+}
+
+@keyframes appear {
+  0% {
+    bottom: -100vh;
+  }
+  100% {
+    bottom: 0vh;
+  }
+}
+.confirm::before {
+  content: "";
+  width: 100vw;
+  height: 200vh;
+  position: absolute;
+  bottom: 0;
+  background: rgba(6, 0, 0, 0.699);
+  left: 0;
+  z-index: -1;
+}
+
+.box {
+  width: 100%;
+  height: fit-content;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2vh;
+}
+.info {
+  color: var(--highlight-text);
+}
+
+.box p {
+  color: var(--secondary-text);
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btns button {
+  width: 45%;
+  height: 6vh;
+  border-radius: 1vh;
+  border: none;
+  background: var(--background-color);
+  border: 0.5px solid var(--border-color);
+  color: var(--highlight-text);
+  font-weight: 700;
+}
+
+.btns button:nth-child(2) {
+  background: var(--primary-color);
+  color: var(--text-color);
+}

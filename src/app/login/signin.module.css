@@ -1,0 +1,110 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.top {
+  height: 20vh;
+  width: 100%;
+}
+
+.banner {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.back {
+  position: absolute;
+  left: 3vh;
+  top: 3vh;
+  font-size: 3vh;
+}
+.bannerImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bottom {
+  height: 80vh;
+  width: 100%;
+  padding: 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
+}
+
+.warnning {
+  padding: 2vh;
+  width: 100%;
+}
+
+.loginTitle {
+  color: var(--highlight-text);
+  width: 100%;
+}
+.loginTitle span {
+  color: var(--text-color);
+}
+
+.phoneBox {
+  width: 100%;
+  height: 6vh;
+  position: relative;
+}
+
+.phoneBox input {
+  border: 0.5px solid var(--border-color);
+  height: 100%;
+  width: 100%;
+  background: var(--secondary-bg);
+  padding-left: 8vh;
+  border-radius: 1vh;
+  color: var(--highlight-text);
+}
+.phoneBox input:focus ~ h2 {
+  font-size: 2.3vh;
+  transition: 0.2s ease-in;
+}
+.phoneBox input:focus {
+  font-size: 2.3vh;
+  transition: 0.2s ease-in;
+  outline: 0.5px solid var(--text-color);
+  border: none;
+}
+.phoneBox h2 {
+  position: absolute;
+  left: 3vh;
+  color: var(--secondary-text);
+  top: 30%;
+  z-index: 2;
+  font-size: 2.5vh;
+  color: var(--highlight-text);
+  font-weight: 600;
+}
+
+.warnning {
+  width: 100%;
+  color: var(--text-color);
+  font-size: 1.5vh;
+  font-weight: 400;
+}
+
+.warnning span {
+  color: var(--highlight-text);
+}
+
+.Continue {
+  width: 100%;
+  background: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.5vh;
+  padding: 2vh;
+  color: var(--text-color);
+  border: none;
+  border-radius: 1vh;
+}

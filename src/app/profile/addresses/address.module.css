@@ -1,0 +1,30 @@
+.wrapper {
+  width: 100vw;
+  position: relative;
+}
+.container {
+  padding-top: 7vh;
+  background-color: var(--background-color);
+  min-height: 100svh;
+}
+.allAddresses {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.addNew {
+  background-color: var(--secondary-bg);
+  padding: 2vh;
+  box-shadow: 3px 2px 5px var(--shadow-color);
+}
+
+.addNew h2 {
+  font-size: 2vh;
+  color: rgb(0, 115, 255);
+}
+
+.default {
+  font-size: 1.5vh;
+  padding: 2vh;
+  color: var(--highlight-text);
+}

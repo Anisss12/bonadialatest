@@ -1,0 +1,101 @@
+.container {
+  width: 100vw;
+  background: var(--secondary-bg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2vh;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2vh;
+  height: 7vh;
+  padding: 2vh;
+  width: 100%;
+}
+
+.icon {
+  height: 4vh;
+  width: 4vh;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--text-color);
+}
+
+.heading h2 {
+  font-size: 2vh;
+  color: green;
+}
+.heading p {
+  font-size: 1.5vh;
+  color: var(--secondary-text);
+}
+
+.box {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 2vh;
+  border-radius: 2vh;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 12vh;
+}
+
+.imgBox {
+  width: 20%;
+
+  overflow: hidden;
+  border-radius: 1vh;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.info {
+  font-size: 1.5vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  height: 100%;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.info h2 {
+  color: var(--highlight-text);
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2vh;
+}
+.btns button {
+  width: 48%;
+  height: 4.5vh;
+  border-radius: 1vh;
+  border: 1px solid var(--border-color);
+  background: var(--secondary-bg);
+  color: var(--highlight-text);
+}

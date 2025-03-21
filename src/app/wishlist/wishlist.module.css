@@ -1,0 +1,26 @@
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: auto;
+}
+
+.wishlistContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
+.titlePara {
+  margin-top: 7vh;
+  padding: 2vh;
+}
+.wishlistTitle {
+  color: var(--highlight-text);
+  font-size: 2vh;
+}
+.titlePara p {
+  color: var(--text-color);
+  font-size: 1.5vh;
+}

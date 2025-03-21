@@ -1,0 +1,32 @@
+.category {
+  margin-top: 7vw;
+  display: flex;
+}
+.filter {
+  width: 16%;
+  border: 0.5px solid var(--border-color);
+}
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .category {
+    margin-top: 10vh;
+    padding-bottom: 7vh;
+  }
+  .filter {
+    display: none;
+  }
+  .products {
+    position: relative;
+    width: 100%;
+    padding: 1vh;
+    gap: 1vh;
+  }
+}

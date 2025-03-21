@@ -1,0 +1,57 @@
+.addressItem {
+  background: var(--card-bg);
+  padding: 2vh 2vh 0vh 2vh;
+}
+.namePlace {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.name {
+  font-size: 1.5vh;
+  color: var(--highlight-text);
+}
+.place {
+  font-size: 1.5vh;
+  padding: 0.5vh 2vh;
+  background: var(--background-color);
+  border-radius: 2vh;
+  color: var(--secondary-text);
+}
+.details {
+  padding-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+.details h2 {
+  font-size: 1.5vh;
+  color: var(--secondary-text);
+  font-weight: 400;
+}
+.mob {
+  padding-top: 2vh;
+}
+.btns {
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.btns button {
+  width: 50%;
+  height: 5vh;
+  background: var(--card-bg);
+  border: none;
+  font-size: 1.5vh;
+  color: rgb(0, 115, 255);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns button:nth-child(1) {
+  border-right: 1px solid var(--border-color);
+}

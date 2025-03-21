@@ -1,0 +1,43 @@
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .statusNav {
+    flex-direction: row;
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    background: var(--background-color);
+    width: 100vw;
+    height: 7.5vh;
+    border-bottom: 0.5px solid var(--border-color);
+    align-items: center;
+    justify-content: space-around;
+    padding: 2vh;
+    box-shadow: 3px 3px 5px var(--shadow-color);
+    color: var(--text-color);
+  }
+
+  .back {
+    width: 5vh;
+    font-size: 3vh;
+  }
+
+  .back i {
+    color: var(--text-color);
+  }
+  .title {
+    width: 50%;
+  }
+  .title h2 {
+    font-size: 2vh;
+    font-weight: 400;
+  }
+  .status {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+  }
+  .status h3 {
+    font-size: 1.5vh;
+    font-weight: 300;
+  }
+}

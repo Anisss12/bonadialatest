@@ -1,0 +1,160 @@
+.wrapper {
+  position: relative;
+  background: var(--background-color);
+}
+
+.container {
+  padding-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+.searchBar {
+  width: 100vw;
+  padding: 2vh;
+  display: flex;
+  justify-content: space-between;
+  background: var(--secondary-bg);
+}
+
+.inputBox {
+  border: 1px solid var(--border-color);
+
+  height: 4.5vh;
+  width: 70%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  color: var(--text-color);
+}
+
+.inputBox input {
+  height: 100%;
+  border: none;
+  outline: none;
+  background: var(--secondary-bg);
+}
+.filter {
+  color: var(--text-color);
+  font-size: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh;
+  width: 25%;
+  border: 1px solid var(--border-color);
+  height: 4.5vh;
+}
+
+.cardBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  background: var(--background-color);
+}
+
+.end {
+  height: 5vh;
+  font-size: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
+
+.filterOtion {
+  position: fixed;
+  bottom: -100%;
+  visibility: hidden;
+  background: var(--background-color);
+  height: fit-content;
+  width: 100%;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.filterOtionShow {
+  visibility: visible;
+  bottom: 0;
+}
+
+.filterOtionShow::before {
+  content: "";
+  height: 150svh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.566);
+  position: absolute;
+  bottom: 100%;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh;
+  padding-right: 4vh;
+  height: 10vh;
+  color: var(--highlight-text);
+}
+.title h2 {
+  font-size: 2vh;
+  padding-top: 3vh;
+}
+.statusTitle,
+.timeTitle {
+  padding: 2vh;
+  font-size: 2vh;
+  color: var(--highlight-text);
+}
+.time,
+.filterStatus {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-color);
+}
+.checkItem,
+.titmeItem {
+  display: flex;
+  flex-direction: row;
+  padding: 1vh;
+  padding-left: 2vh;
+  gap: 2vh;
+}
+.checkItem h2,
+.titmeItem h2 {
+  font-size: 2vh;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.filterBtns {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2vh;
+}
+
+.clear {
+  width: 48%;
+  background: var(--background-color);
+  border-radius: 1vh;
+  color: var(--text-color);
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+}
+
+.apply {
+  width: 48%;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 1vh;
+  color: var(--text-color);
+  font-weight: 700;
+}

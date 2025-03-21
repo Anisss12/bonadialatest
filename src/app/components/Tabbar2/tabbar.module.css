@@ -1,0 +1,150 @@
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  background: var(--background-color);
+  width: 100%;
+  display: none;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .tabbar {
+    display: flex;
+    font-size: 3vh;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -2px -2px 3px var(--shadow-color);
+    height: 7vh;
+  }
+
+  .bar {
+    display: flex;
+    width: 100%;
+  }
+
+  .block {
+    border-right: 0.5px solid gray;
+    width: 50%;
+    transition: 0.2s ease-in-out;
+    color: var(--text-color);
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+    gap: 0.3vh;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .label {
+    font-size: 1.5vh;
+  }
+
+  .block::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: crimson;
+    opacity: 0;
+
+    border-radius: 50%;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+
+  .block:hover::before {
+    animation: clickanim 0.3s ease-in-out;
+  }
+
+  @keyframes clickanim {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  /* SORT CONTAINER */
+  .sortContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* BLUR OVERLAY */
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0px);
+    z-index: 1;
+  }
+
+  /* SORT BOX */
+  .sortBox {
+    width: 100%;
+    background: var(--background-color);
+
+    padding: 2vh;
+    position: relative;
+    z-index: 2;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .show .sortBox {
+    transform: translateY(0);
+  }
+
+  .title {
+    font-size: 2.5vh;
+    padding: 1vh 2vh;
+    border-bottom: 0.5px solid var(--border-color);
+    color: var(--highlight-text);
+  }
+
+  .options {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    padding: 2vh;
+    font-size: 2vh;
+    align-items: center;
+  }
+
+  .options i {
+    color: var(--text-color);
+  }
+  .options h5 {
+    font-weight: 300;
+    color: var(--text-color);
+  }
+}

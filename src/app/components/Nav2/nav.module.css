@@ -1,0 +1,280 @@
+.nav {
+  width: 100vw;
+  box-shadow: 2px 2px 3px var(--shadow-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  background: var(--background-color);
+}
+.menubar {
+  display: none;
+}
+.logo {
+  font-size: 2.5vw;
+  text-transform: uppercase;
+  color: rgb(244, 9, 87);
+  width: 15%;
+  height: 5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  font-size: 3vh;
+  padding-left: 1vh;
+}
+
+.logoImage {
+  height: 100%;
+  width: 100%;
+}
+.linkBoxeses {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  color: white;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.advertise {
+  display: none;
+}
+.closeBox {
+  display: none;
+}
+.menuLink {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+
+.arrow {
+  display: none;
+}
+.othersLinkBox {
+  display: none;
+}
+.search {
+  width: 30vw;
+  height: 2.5vw;
+  border-radius: 0.3vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background: rgb(244, 242, 242);
+}
+
+.serchIcon {
+  width: 10%;
+}
+
+.inputField {
+  height: 100%;
+  border: none;
+  outline: none;
+  width: 90%;
+  font-size: 1.3vw;
+  background: none;
+}
+
+.tools {
+  display: flex;
+  gap: 2vw;
+  font-size: 1.5vw;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    gap: 3vh;
+    align-items: center;
+  }
+  .menubar {
+    display: flex;
+    font-weight: 100;
+    color: var(--text-color);
+  }
+  .leftArrow {
+    color: white;
+  }
+  .menuLine {
+    display: none;
+  }
+  .logo {
+    width: 40%;
+    height: 4vh;
+  }
+
+  .logoImage {
+    height: 70%;
+    width: 100%;
+  }
+  .closeBox {
+    display: none;
+  }
+  .menu {
+    flex-direction: row;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 5px;
+    height: 100vh;
+    width: 100%;
+    margin-right: -200%;
+    touch-action: none;
+    top: 0;
+    color: black;
+    z-index: 11;
+    justify-content: space-between;
+    gap: 0vw;
+    animation: menu 0.3s 0.2s ease-in-out forwards;
+    transition: ease 0.5s;
+  }
+
+  .closeBox {
+    display: block;
+    height: 100%;
+    background: #00000053;
+    animation: close 0.3s 0.2s ease-in-out forwards;
+  }
+  .advertise {
+    display: block;
+    height: 20vh;
+    width: 100%;
+  }
+
+  .adImg {
+    height: 100%;
+    width: 100%;
+  }
+  .linkBoxeses {
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+    animation: collaps 0.5s ease-in-out forwards;
+    justify-content: flex-start;
+    margin-top: 0;
+    align-items: flex-start;
+  }
+  .menuLinkBox {
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .menuLinkBox:hover {
+    transition: 0.4s ease-in-out;
+    background: #e41b7c4d;
+  }
+
+  @keyframes collaps {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+  @keyframes close {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 25%;
+    }
+  }
+  .menuLink {
+    font-size: 4vw;
+    flex: 1;
+    color: black;
+    width: 95%;
+  }
+
+  .arrow {
+    color: black;
+    display: block;
+    height: 100%;
+    width: 5%;
+    font-weight: 300;
+  }
+  .othersLinkBox {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2vh;
+    gap: 2vh;
+    border-top: 0.5px solid #d4d5d9;
+    width: 100%;
+    padding-top: 2vh;
+  }
+
+  .otherlink {
+    text-decoration: none;
+    color: gray;
+    font-weight: 400;
+  }
+  .search {
+    width: 90vw;
+    height: 6vh;
+    border-radius: 5vh;
+    gap: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    align-self: last baseline;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 10;
+  }
+
+  .inputField {
+    font-size: 3vw;
+  }
+
+  .search::before {
+    content: "";
+    width: 100vw;
+    height: 8vh;
+    position: absolute;
+    z-index: -10;
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 8px 0px 8px 0px;
+  }
+
+  .tools {
+    gap: 1vw;
+    font-size: 2.5vh;
+
+    width: 30%;
+    height: 7vh;
+    justify-content: space-around;
+    align-self: stretch;
+  }
+
+  .toolsLink {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+}

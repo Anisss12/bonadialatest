@@ -1,0 +1,163 @@
+.loading {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loadingImg {
+  height: 40%;
+  width: 70%;
+}
+
+.loader {
+  height: 10px;
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(farthest-side, gray 90%, #0000);
+  background: var(--_g) left, var(--_g) right;
+  background-size: 25% 100%;
+  display: grid;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  height: inherit;
+  aspect-ratio: 1;
+  grid-area: 1/1;
+  margin: auto;
+  border-radius: 50%;
+  transform-origin: -100% 50%;
+  background: #e41b7b;
+  animation: l49 1s infinite linear;
+}
+.loader:after {
+  transform-origin: 200% 50%;
+  --s: -1;
+  animation-delay: -0.5s;
+}
+
+@keyframes l49 {
+  58%,
+  100% {
+    transform: rotate(calc(var(--s, 1) * 1turn));
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--secondary-color);
+}
+.home {
+  overflow: hidden;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.title {
+  padding-top: 3vw;
+}
+
+.mainSlide {
+  width: 100%;
+  height: 30vw;
+}
+.vcardSection {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hcardSection {
+  height: auto;
+}
+
+.hcardSection {
+  flex-direction: row;
+  gap: 1vw;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  display: flex;
+  scrollbar-width: none; /* Hide scrollbar */
+}
+
+.hproductSection {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vw;
+  height: 80vh;
+  width: 100vw;
+}
+.mincardSection {
+  display: none;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 2vh;
+    color: var(--text-color);
+  }
+
+  .mainSlide {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .vcardSection {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .hcardSection {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+  }
+  .hproductSection {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Use 'auto' to show scrollbar only when needed */
+    gap: 1vw;
+    height: auto;
+    flex-wrap: nowrap;
+    padding: 10px; /* Optional: Adds space around the section */
+  }
+
+  /* Ensure child items don't shrink */
+  .hproductSection > * {
+    flex: 0 0 auto; /* Prevents shrinking */
+    min-width: 45%; /* Adjust based on your design */
+    max-width: ; /* Optional: Prevents too wide items */
+    white-space: nowrap; /* Prevents text from breaking */
+  }
+
+  .mincardSection {
+    display: flex;
+    gap: 1vh;
+    overflow-x: scroll;
+    flex-direction: row;
+    scrollbar-width: none; /* Hide scrollbar */
+    width: auto;
+    scroll-behavior: smooth;
+    flex-grow: 1;
+  }
+}
