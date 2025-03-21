@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/app/context/ThemeProvider";
-
+import Providers from "./redux/Providers";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           {" "}
           {/* ✅ Wrap entire app in ThemeProvider */}
           <div></div>
-          {children}
+          <Providers>{children}</Providers>{" "}
         </ThemeProvider>
       </body>
     </html>
