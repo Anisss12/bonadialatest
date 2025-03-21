@@ -1,4 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* Light Theme (Default) */
+:root {
+  --primary-color: #b51561;
+  --background-color: #fdf6f8;
+  --secondary-bg: #fbe6ec;
+  --text-color: #3b0c1a;
+  --secondary-text: #7a4f54;
+  --card-bg: #fbe6ec;
+  --border-color: #d48fa3;
+  --button-bg: #e41b7c;
+  --button-hover: #b51561;
+  --highlight-text: #e41b7c;
+  --link-color: #e41b7c;
+  --link-hover: #b51561;
+  --price-color: #cc9900;
+  --discount-price: #d32f2f;
+  --success-color: #198754;
+  --warning-color: #ffaa00;
+  --error-color: #b00020;
+  --placeholder-color: #7a4f54;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-color: #e41b7c;
+  --background-color: #1a0e12;
+  --secondary-bg: #2b151f;
+  --text-color: #e8d9dc;
+  --secondary-text: #a17783;
+  --card-bg: #25131a;
+  --border-color: #7a4f54;
+  --button-bg: #e41b7c;
+  --button-hover: #b51561;
+  --highlight-text: #ff4081;
+  --link-color: #e41b7c;
+  --link-hover: #ff3366;
+  --price-color: #ffcc00;
+  --discount-price: #ff4d4d;
+  --success-color: #198754;
+  --warning-color: #ffaa00;
+  --error-color: #b00020;
+  --placeholder-color: #a17783;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Apply theme to body */
 
 * {
   padding: 0;
@@ -18,7 +65,11 @@ html {
 .some-scrollable-element {
   scroll-behavior: smooth;
 }
+
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   position: relative;
   padding: 0;
   margin: 0;

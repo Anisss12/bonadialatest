@@ -1,0 +1,5 @@
+.themeToggle {
+  background: transparent;
+  color: var(--text-color);
+  border: none;
+}

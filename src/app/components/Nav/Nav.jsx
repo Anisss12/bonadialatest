@@ -8,6 +8,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../../../../public/logos/navlogo1.svg";
 import banner from "../../../../public/banner.jpg";
 import { Menu, Heart, Bell, BaggageClaim, Search } from "lucide-react";
+import ThemeToggle from "../ThemeToggle";
 
 const Nav = ({ children }) => {
   const [className, setClassName] = useState("Box");
@@ -98,12 +99,11 @@ const Nav = ({ children }) => {
         <Link href="/wishlist" className={styles.toolsLink}>
           <Heart size={20} strokeWidth={2} absoluteStrokeWidth />
         </Link>
-        <Link href="/cart" className={styles.toolsLink}>
-          <BaggageClaim size={20} strokeWidth={2} absoluteStrokeWidth />
-        </Link>
+
         <Link href="/notifications" className={styles.toolsLink}>
           <Bell size={20} strokeWidth={2} absoluteStrokeWidth />
         </Link>
+        <ThemeToggle></ThemeToggle>
       </section>
     </nav>
   );

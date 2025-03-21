@@ -1,14 +1,9 @@
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
+import { ThemeProvider } from "@/app/context/ThemeProvider";
 
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import styles from "./admin.module.css";
-import Providers from "./redux/Providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -22,8 +17,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} `}>
-        <Providers>{children}</Providers>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <ThemeProvider>
+          {" "}
+          {/* ✅ Wrap entire app in ThemeProvider */}
+          <div></div>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
