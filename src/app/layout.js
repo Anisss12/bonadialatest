@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 
 import "./globals.css";
+import styles from "./admin.module.css";
 import Providers from "./redux/Providers";
 
 const geistSans = Geist({

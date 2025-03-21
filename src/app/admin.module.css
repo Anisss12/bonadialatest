@@ -1,0 +1,21 @@
+.theme {
+  --primary-color: #e41b7c;
+  --background-color: #1a0e12;
+  --secondary-bg: #2b151f;
+  --text-color: #e8d9dc;
+  --secondary-text: #a17783;
+  --card-bg: #25131a;
+  --border-color: #7a4f54; /* More natural & minimal */
+  --button-bg: #e41b7c;
+  --button-hover: #b51561;
+  --highlight-text: #ff4081;
+  --link-color: #e41b7c;
+  --link-hover: #ff3366;
+  --price-color: #ffcc00;
+  --discount-price: #ff4d4d;
+  --success-color: #198754;
+  --warning-color: #ffaa00;
+  --error-color: #b00020;
+  --placeholder-color: #a17783;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
