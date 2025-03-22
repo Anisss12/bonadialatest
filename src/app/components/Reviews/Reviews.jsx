@@ -8,7 +8,7 @@ const Reviews = () => {
           {" "}
           3 <i className="fa-solid fa-star"></i>
         </h3>
-        <p>
+        <p className={styles.message}>
           The quality is alright, not great, but good enough. The front part has
           a weird fit, not uncomfortable, maybe try a size smaller.
         </p>

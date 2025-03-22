@@ -13,10 +13,6 @@
   gap: 0.5vh;
 }
 
-.card:hover {
-  transform: scale(1.02);
-}
-
 /* Left Side - Image */
 .imageContainer {
   width: 100%;
@@ -26,14 +22,14 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 2vw;
   position: relative;
+  border-radius: 1vh;
 }
 
 .image {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 /* Discount Badge */
@@ -61,7 +57,7 @@
 .title {
   font-size: 18px;
   font-weight: bold;
-  color: var(--highlight-text);
+  color: var(--text-color);
   margin-bottom: 5px;
 
   width: 100%;
@@ -76,10 +72,18 @@
 /* Rating */
 .rating {
   display: flex;
-  font-size: 14px;
-  color: #ffcc00;
+
+  color: var(--text-color);
   margin-bottom: 8px;
   position: absolute;
+  bottom: 0vh;
+
+  left: 1vh;
+  background: var(--background-color);
+}
+.rating h4 {
+  font-size: 1.5vh;
+  font-weight: 600;
 }
 
 /* Price Section */
@@ -121,10 +125,9 @@
 
 .addToCart {
   color: var(--card-bg);
-  border-radius: 5vh;
+  border-radius: 1.5vh;
   width: 100%;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   color: var(--highlight-text);
 }
 
@@ -136,8 +139,8 @@
 /* 📱 Mobile Responsive */
 @media (max-width: 768px) {
   .card {
-    width: 45%;
-    height: 45vh;
+    width: 40%;
+    height: 35vh;
     border-bottom: none;
     border-left: none;
     border-right: none;
@@ -146,21 +149,19 @@
   .imageContainer {
     width: 100%;
     height: 80%;
-    border-radius: 1vh;
     overflow: hidden;
   }
 
   .content {
     width: 100%;
     text-align: center;
+    justify-content: flex-start;
   }
   .title {
-    font-size: 2vh;
+    font-size: 1.5vh;
     font-weight: bold;
-    color: var(--highlight-text);
     margin-bottom: 5px;
     text-transform: uppercase;
-
     width: 100%;
     display: flex;
     justify-content: left;
@@ -172,28 +173,35 @@
 
   .buttonContainer {
     justify-content: center;
-    font-size: 1vh;
+    height: 4vh;
   }
   .button {
     font-size: 1.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .rating {
     display: flex;
-    font-size: 1.5vh;
-    color: #ffcc00;
     align-items: center;
     justify-content: flex-start;
+    padding: 0.1vh 0.5vh;
+    border: 1px solid var(--border-color);
+    border-radius: 1vh;
   }
   .priceContainer {
     flex-direction: row;
+    font-size: 1.5vh;
   }
   .actualPrice {
     display: flex;
     align-items: center;
-    font-size: 2vh;
-    color: #e41b7b;
+    font-size: 1.5vh;
+    color: var(--price-color);
   }
-
+  .crossedPrice {
+    font-size: 1.5vh;
+  }
   .stockStatus {
     text-align: left;
     font-weight: 300;

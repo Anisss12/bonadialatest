@@ -50,8 +50,8 @@
 
 @media (max-width: 768px) {
   .hcard {
-    height: 40vh;
-    width: 35vh;
+    height: 30vh;
+    width: 20vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;

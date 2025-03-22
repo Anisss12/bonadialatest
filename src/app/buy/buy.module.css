@@ -302,6 +302,16 @@
   color: var(--text-color);
 }
 
+.reviewTitle {
+  padding-left: 2vh;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.reviewsItem {
+  padding: 1.5vh;
+}
 .reviewGraph {
   display: flex;
   flex-wrap: wrap;
@@ -311,30 +321,38 @@
 }
 
 .buyerStar {
-  width: 100%;
-  max-width: 40%;
   display: flex;
+  padding: 2vh;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 40%;
+  border-right: 1px solid var(--border-color);
 }
 
 .numStar {
-  font-size: 3rem;
+  font-size: 5vh;
   font-weight: 300;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
 }
 
 .numStar span {
-  font-size: 1.5rem;
+  font-size: 3vh;
+}
+.vTitle {
+  font-size: 1.5vh;
+  font-weight: 600;
 }
 
 .graphBox {
   padding-left: 1vw;
   width: 60%;
-  gap: 0.8rem;
+  gap: 0.5vh;
   display: flex;
   flex-direction: column;
+  padding: 2vh;
 }
 
 .graph {
@@ -407,32 +425,31 @@
 }
 
 .cReviews {
-  padding: 1vw;
+  padding: 1vh;
 }
 
 .related {
   font-size: 1.1vw;
 }
 
-.vCardSection,
-.hCardSection {
+.hCardSection,
+.hProductSection {
   display: flex;
+  width: 100vw;
   flex-direction: row;
-  gap: 1vw;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent items from wrapping */
-  width: 100%; /* Ensure it takes full width */
-  padding-bottom: 10px; /* Prevent scrollbar overlap */
-  align-items: stretch; /* Ensures equal height elements */
-  width: fit-content; /* Ensures it only takes necessary space */
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 2vh;
+  scrollbar-width: none;
 }
 
-.vCardSection > *,
-.hCardSection > * {
+.hCardSection > *,
+.hProductSection > * {
   flex: 0 0 auto; /* Prevents shrinking */
-  width: fit-content; /* Ensures it only takes necessary space */
 }
-
+.title {
+  font-size: 2vh;
+}
 /* Mobile Styles */
 @media (max-width: 768px) {
   .container {

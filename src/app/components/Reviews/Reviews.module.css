@@ -50,6 +50,9 @@
     margin-top: 1vh;
   }
 
+  .message {
+    font-size: 1.5vh;
+  }
   .starText {
     flex-direction: column;
     align-items: flex-start;

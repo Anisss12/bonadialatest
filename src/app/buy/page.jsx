@@ -215,66 +215,6 @@ const ProductDetails = () => {
             </div>
 
             {/* Reviews */}
-            <div className={styles.reviews}>
-              <div className={styles.reviewTitle}>RATING⭐</div>
-              <div className={styles.reviewGraph}>
-                <div className={styles.buyerStar}>
-                  <h2 className={styles.numStar}>
-                    4{" "}
-                    <span>
-                      <i className="fa-solid fa-star"></i>
-                    </span>
-                  </h2>{" "}
-                  <p>Verified buyers</p>
-                </div>
-                <div className={styles.graphBox}>
-                  <div className={styles.graph}>
-                    <h1>
-                      5<i className="fa-solid fa-star"></i>
-                    </h1>
-                    <div className={styles.firstBar}></div>
-                    <h1>72</h1>
-                  </div>
-                  <div className={styles.graph}>
-                    <h1>
-                      4<i className="fa-solid fa-star"></i>
-                    </h1>
-                    <div className={styles.secondBar}></div>
-                    <h1>72</h1>
-                  </div>
-                  <div className={styles.graph}>
-                    <h1>
-                      3<i className="fa-solid fa-star"></i>
-                    </h1>
-                    <div className={styles.thirdBar}></div>
-                    <h1>72</h1>
-                  </div>
-                  <div className={styles.graph}>
-                    <h1>
-                      2<i className="fa-solid fa-star"></i>
-                    </h1>
-                    <div className={styles.forthBar}></div>
-                    <h1>72</h1>
-                  </div>
-                  <div className={styles.graph}>
-                    <h1>
-                      1<i className="fa-solid fa-star"></i>
-                    </h1>
-                    <div className={styles.fifthBar}></div>
-                    <h1>72</h1>
-                  </div>
-                </div>
-              </div>
-              <h3 className={styles.cReviews}>Customer Reviews (112)</h3>
-
-              {Array(5)
-                .fill()
-                .map((_, index) => (
-                  <Reviews key={index} />
-                ))}
-
-              <h3 className={styles.viewAll}>View all Reviews</h3>
-            </div>
           </div>
         </div>
 
@@ -282,33 +222,102 @@ const ProductDetails = () => {
         <div className={styles.related}>
           <h2 className={styles.relatedTitle}>Related Products</h2>
           <div className={styles.relatedGrid}>
-            {Array(1)
-              .fill()
-              .map((_, index) => (
-                <Slider key={index} />
-              ))}
-
-            <div className={styles.vCardSection}>
-              {kidcloth.map((link, index) => (
-                <Vcard key={index} link={link} />
-              ))}
-            </div>
             <div className={styles.hCardSection}>
               {kidcloth.map((link, index) => (
                 <Hcard key={index} link={link} />
               ))}
             </div>
-
-            {Array(1)
-              .fill()
-              .map((_, index) => (
-                <Slider key={index} />
-              ))}
+            <h1 className={styles.title}>You may like</h1>
             <div className={styles.hProductSection}>
               {kidcloth.map((link, index) => (
                 <Hproduct key={index} link={link} />
               ))}
             </div>
+            <h1 className={styles.title}>You may like</h1>
+            <div className={styles.hProductSection}>
+              {kidcloth.map((link, index) => (
+                <Hproduct button={"none"} key={index} link={link} />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className={styles.reviews}>
+          <div className={styles.reviewTitle}>RATING⭐</div>
+          <div className={styles.reviewGraph}>
+            <div className={styles.buyerStar}>
+              <h2 className={styles.numStar}>
+                4{" "}
+                <span>
+                  <i className="fa-solid fa-star"></i>
+                </span>
+              </h2>{" "}
+              <p className={styles.vTitle}>Verified buyers</p>
+            </div>
+
+            <div className={styles.graphBox}>
+              <div className={styles.graph}>
+                <h1>
+                  5<i className="fa-solid fa-star"></i>
+                </h1>
+                <div className={styles.firstBar}></div>
+                <h1>72</h1>
+              </div>
+              <div className={styles.graph}>
+                <h1>
+                  4<i className="fa-solid fa-star"></i>
+                </h1>
+                <div className={styles.secondBar}></div>
+                <h1>72</h1>
+              </div>
+              <div className={styles.graph}>
+                <h1>
+                  3<i className="fa-solid fa-star"></i>
+                </h1>
+                <div className={styles.thirdBar}></div>
+                <h1>72</h1>
+              </div>
+              <div className={styles.graph}>
+                <h1>
+                  2<i className="fa-solid fa-star"></i>
+                </h1>
+                <div className={styles.forthBar}></div>
+                <h1>72</h1>
+              </div>
+              <div className={styles.graph}>
+                <h1>
+                  1<i className="fa-solid fa-star"></i>
+                </h1>
+                <div className={styles.fifthBar}></div>
+                <h1>72</h1>
+              </div>
+            </div>
+          </div>
+          <h3 className={styles.cReviews}>Customer Reviews (112)</h3>
+
+          <div className={styles.reviewsItem}>
+            {Array(5)
+              .fill()
+              .map((_, index) => (
+                <Reviews key={index} />
+              ))}
+            <h3 className={styles.viewAll}>View all Reviews</h3>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.related}>
+        <div className={styles.relatedGrid}>
+          <h1 className={styles.title}>You may like</h1>
+          <div className={styles.hProductSection}>
+            {kidcloth.map((link, index) => (
+              <Hproduct key={index} link={link} />
+            ))}
+          </div>
+          <h1 className={styles.title}>You may like</h1>
+          <div className={styles.hProductSection}>
+            {kidcloth.map((link, index) => (
+              <Hproduct button={"none"} key={index} link={link} />
+            ))}
           </div>
         </div>
       </div>

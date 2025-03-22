@@ -4,7 +4,7 @@ import Image from "next/image";
 import kdimg from "../../../../public/kids.jpg";
 import Link from "next/link";
 
-const ProductCard = ({ product, link }) => {
+const ProductCard = ({ product, link, button }) => {
   return (
     <Link href={"/buy"} className={styles.card}>
       {/* Left Side - Image */}
@@ -18,10 +18,7 @@ const ProductCard = ({ product, link }) => {
           className={styles.image}
         />
         <div className={styles.rating}>
-          <h4 style={{ color: "blue", fontWeight: "250" }}> 4.6</h4>
-          {"⭐".repeat(4)}
-          {"☆".repeat(1)}
-          <h4 style={{ color: "black", fontWeight: "250" }}> (200)</h4>
+          <h4>⭐ 4.6</h4>
         </div>
       </div>
 
@@ -39,7 +36,7 @@ const ProductCard = ({ product, link }) => {
         </div>
 
         {/* Buttons */}
-        <div className={styles.buttonContainer}>
+        <div style={{ display: button }} className={styles.buttonContainer}>
           <button
             className={`${styles.button} ${styles.addToCart}`}
             disabled={true}

@@ -136,7 +136,7 @@
     display: flex;
     flex-direction: row;
     overflow-x: auto; /* Use 'auto' to show scrollbar only when needed */
-    gap: 1vw;
+    gap: 2vh;
     height: auto;
     flex-wrap: nowrap;
     padding: 10px; /* Optional: Adds space around the section */
@@ -145,8 +145,7 @@
   /* Ensure child items don't shrink */
   .hproductSection > * {
     flex: 0 0 auto; /* Prevents shrinking */
-    min-width: 45%; /* Adjust based on your design */
-    max-width: ; /* Optional: Prevents too wide items */
+
     white-space: nowrap; /* Prevents text from breaking */
   }
 
