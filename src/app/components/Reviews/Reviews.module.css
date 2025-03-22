@@ -10,14 +10,37 @@
   align-items: center;
 }
 
-.starText h3 {
-  background: green;
-  padding: 0.5rem;
-  font-size: 1rem;
+.star {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.star h3 {
+  font-size: 1.5vh;
   width: fit-content;
   height: fit-content;
-  color: var(--text-color);
+}
+.icon {
+  background: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5vh;
+  font-size: 2vh;
+  padding: 0.3vh 1vh;
+  width: fit-content;
+  height: fit-content;
   border-radius: 5px;
+  color: white;
+}
+
+.icon span i {
+  font-size: 1.5vh;
 }
 
 .nameDate {
@@ -43,7 +66,6 @@
 @media (max-width: 768px) {
   .customerFeedback {
     padding-top: 1vh;
-    background: var(--card-bg);
     color: var(--text-color);
     padding: 1vh;
     border-radius: 1vh;
@@ -60,10 +82,11 @@
   }
 
   .starText h3 {
-    font-size: 1.5vh;
+    font-size: 2vh;
     padding: 0.4rem;
     display: flex;
     flex-direction: row;
+    font-weight: 300;
   }
 
   .likeDislike {

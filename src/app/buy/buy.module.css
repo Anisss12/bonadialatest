@@ -249,7 +249,6 @@
   border: 0.1px solid var(--border-color);
   padding: 3vw;
   border-radius: 2vw;
-  background: var(--card-bg);
 }
 .productDetails h1 {
   font-size: 1.1rem;
@@ -271,7 +270,6 @@
 .specifications {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .specifications h2 {
@@ -281,7 +279,6 @@
 
 .section {
   width: 100%;
-  max-width: 40%;
   border-bottom: 0.5px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
@@ -303,7 +300,7 @@
 }
 
 .reviewTitle {
-  padding-left: 2vh;
+  padding: 2vh;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -316,7 +313,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border-bottom: 0.5px solid var(--border-color);
   padding-bottom: 1rem;
 }
 
@@ -331,15 +327,16 @@
 }
 
 .numStar {
+  font-weight: 900;
   font-size: 5vh;
-  font-weight: 300;
   color: var(--text-color);
   display: flex;
   align-items: center;
 }
 
 .numStar span {
-  font-size: 3vh;
+  font-size: 2vh;
+  color: green;
 }
 .vTitle {
   font-size: 1.5vh;
@@ -424,6 +421,11 @@
   background: red;
 }
 
+.bottomLine {
+  width: 100%;
+  padding-top: 2vh;
+  border-bottom: 1px solid var(--border-color);
+}
 .cReviews {
   padding: 1vh;
 }
@@ -435,6 +437,7 @@
 .hCardSection,
 .hProductSection {
   display: flex;
+  padding: 2vh;
   width: 100vw;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -449,6 +452,7 @@
 }
 .title {
   font-size: 2vh;
+  padding-left: 2vh;
 }
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -569,7 +573,7 @@
   .sections {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 3vh;
   }
 
   .specifications {
@@ -583,9 +587,7 @@
   }
 
   .section {
-    width: 100%;
-    max-width: 40%;
-    padding-bottom: 0.5rem;
+    max-width: 45%;
   }
 
   .section p {
@@ -597,8 +599,11 @@
     font-weight: 400;
   }
 
+  .reviewGraph {
+    padding: 2vh;
+  }
   .graphBox {
-    padding-left: 2vh;
+    padding: 1vh;
   }
 
   .graph {

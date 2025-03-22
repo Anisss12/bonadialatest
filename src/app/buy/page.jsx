@@ -242,11 +242,11 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className={styles.reviews}>
-          <div className={styles.reviewTitle}>RATING⭐</div>
+          <div className={styles.reviewTitle}>RATING & REVIEWS</div>
           <div className={styles.reviewGraph}>
             <div className={styles.buyerStar}>
               <h2 className={styles.numStar}>
-                4{" "}
+                4.4{" "}
                 <span>
                   <i className="fa-solid fa-star"></i>
                 </span>
@@ -291,11 +291,12 @@ const ProductDetails = () => {
                 <h1>72</h1>
               </div>
             </div>
+            <h2 className={styles.bottomLine}></h2>
           </div>
           <h3 className={styles.cReviews}>Customer Reviews (112)</h3>
 
           <div className={styles.reviewsItem}>
-            {Array(5)
+            {Array(2)
               .fill()
               .map((_, index) => (
                 <Reviews key={index} />
@@ -307,7 +308,7 @@ const ProductDetails = () => {
 
       <div className={styles.related}>
         <div className={styles.relatedGrid}>
-          <h1 className={styles.title}>You may like</h1>
+          <h1 className={styles.title}>SPONSORED PRODUCTS</h1>
           <div className={styles.hProductSection}>
             {kidcloth.map((link, index) => (
               <Hproduct key={index} link={link} />

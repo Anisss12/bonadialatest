@@ -4,10 +4,16 @@ const Reviews = () => {
   return (
     <div className={styles.customerFeedback}>
       <div className={styles.starText}>
-        <h3>
+        <div className={styles.star}>
           {" "}
-          3 <i className="fa-solid fa-star"></i>
-        </h3>
+          <h2 className={styles.icon}>
+            4
+            <span>
+              <i className="fa-solid fa-star"></i>
+            </span>
+          </h2>
+          <h3> 8 months ago</h3>
+        </div>
         <p className={styles.message}>
           The quality is alright, not great, but good enough. The front part has
           a weird fit, not uncomfortable, maybe try a size smaller.
