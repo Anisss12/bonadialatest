@@ -30,11 +30,11 @@
 }
 
 .heading h2 {
-  font-size: 2vh;
+  font-size: medium;
   color: green;
 }
 .heading p {
-  font-size: 1.5vh;
+  font-size: small;
   color: var(--secondary-text);
 }
 
@@ -69,7 +69,7 @@
 }
 
 .info {
-  font-size: 1.5vh;
+  font-size: small;
   width: 70%;
   display: flex;
   flex-direction: column;

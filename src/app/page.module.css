@@ -109,7 +109,7 @@
 }
 @media (max-width: 768px) {
   .title {
-    font-size: 2vh;
+    font-size: medium;
     color: var(--text-color);
   }
 

@@ -253,7 +253,7 @@
 
   .inputText {
     width: 90%;
-    font-size: 2vh;
+    font-size: medium;
     display: block;
     text-decoration: none;
     color: var(--secondary-text);

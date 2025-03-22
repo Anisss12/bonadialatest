@@ -41,7 +41,7 @@
   }
 
   .label {
-    font-size: 1.5vh;
+    font-size: small;
   }
 
   .block::before {
@@ -136,7 +136,7 @@
     flex-direction: row;
     gap: 1vh;
     padding: 2vh;
-    font-size: 2vh;
+    font-size: medium;
     align-items: center;
   }
 

@@ -40,11 +40,11 @@
 
 .number h2:nth-child(1) {
   font-weight: 400;
-  font-size: 1.5vh;
+  font-size: small;
   color: var(--secondary-text);
 }
 .number h2 {
-  font-size: 2vh;
+  font-size: medium;
   display: flex;
   gap: 1vh;
   align-items: center;
@@ -58,7 +58,7 @@
   height: 2.5vh;
   width: 2.5vh;
   padding: 0.2vh;
-  font-size: 1.5vh;
+  font-size: small;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +84,7 @@
   position: absolute;
   top: 13px; /* Adjust as needed */
   left: 10px; /* Adjust as needed */
-  font-size: 1.5vh;
+  font-size: small;
   padding: 0.5vh;
   background: var(--background-color);
   color: var(--secondary-text);
@@ -139,7 +139,7 @@
 }
 
 .dob label {
-  font-size: 1.5vh;
+  font-size: small;
   position: absolute;
   top: 13px; /* Adjust as needed */
   left: 10px; /* Adjust as needed */
@@ -152,7 +152,7 @@
 .dob input:focus + label,
 .dob input:not(:placeholder-shown) + label {
   top: -9px; /* Adjust as needed */
-  font-size: 1.5vh; /* Adjust as needed */
+  font-size: small; /* Adjust as needed */
 }
 
 .dob input:focus {
@@ -171,7 +171,7 @@
 }
 
 .altNumber h2 {
-  font-size: 2vh;
+  font-size: medium;
   font-weight: 400;
   transition: 0.1s ease-in;
   position: absolute;

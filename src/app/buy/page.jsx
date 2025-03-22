@@ -10,7 +10,15 @@ import Slider from "../components/Slider/Slider";
 import Nav from "../components/Nav/Nav";
 import Nav2 from "../components/Nav2/Nav2";
 import Buyslide from "./Buyslide/Buyslide";
-import { Share2 } from "lucide-react";
+import {
+  Share2,
+  ChevronRight,
+  Heart,
+  ShoppingCart,
+  Package,
+  Banknote,
+  Repeat,
+} from "lucide-react";
 
 // Hardcoded Product Data
 const productData = {
@@ -65,265 +73,168 @@ const kidcloth = [
 
 const ProductDetails = () => {
   return (
-    <div className={styles.wrapper}>
-      <Nav2></Nav2>
-
-      <div className={styles.container}>
-        <div className={styles.product}>
-          {/* Left: Image */}
-
+    <>
+      <div className={styles.wrapper}>
+        <Nav2></Nav2>
+        <div className={styles.container}>
           <div className={styles.imageContainer}>
             <Buyslide></Buyslide>
-            <div className={styles.imgProperty}>
-              {new Array(5).fill().map((_, index) => (
-                <div key={index} className={styles.quickView}>
-                  <Image
-                    style={{ height: "100%", width: "100%" }}
-                    src={kdimg}
-                    alt="img"
-                  ></Image>
-                </div>
-              ))}
+          </div>
+          <div className={styles.titleDescription}>
+            <div className={styles.titlePara}>
+              <h2>
+                Sangaria{" "}
+                <span>
+                  Blue Foral EEmbroided Notch Neck Straigt Kurta With Trouser &
+                  Dopatta
+                </span>{" "}
+              </h2>
             </div>
-
-            <div className={styles.whishShare}>
-              <i className="fa-regular fa-heart"></i>
-              <Share2 size={25} strokeWidth={2} absoluteStrokeWidth />{" "}
+            <div className={styles.priceDiscount}>
+              <h2>
+                MRP Rs. 6,449 <span>1,999</span> <span>60% OFF!</span>
+              </h2>
             </div>
           </div>
+          <div className={styles.cuponSection}>
+            <h2>
+              Best price <span>Rs. 1,699</span>with coupon <span>FLAT 300</span>
+              <ChevronRight />
+            </h2>
+            <h2>Add to cart and save Rs. 300</h2>
+          </div>
+          <div className={styles.actions}>
+            <div className={styles.selectSize}>
+              <h2>Select Size</h2>
+              <h2>
+                Size Chart <ChevronRight size={20} />
+              </h2>
+            </div>
+            <div className={styles.sizeButtons}>
+              <button>S</button>
+              <button>M</button>
+              <button>L</button>
+              <button>L</button>
+              <button>XL</button>
+              <button>XXL</button>
+              <button>3XL</button>
+            </div>
+            <div className={styles.tradeBtn}>
+              <button>
+                Wishlist <Heart size={20} />
+              </button>
+              <button>
+                Add to card
+                <ShoppingCart />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className={styles.delivarySection}>
+          <h2 className={styles.delivaryTitle}>Check Delivary</h2>
+          <input type="text" placeholder="Enter Pin Code" />
+          <h2 className={styles.delivaryExpress}>
+            <Package /> Express delivery <span>might be available</span>
+          </h2>
+          <h2 className={styles.delivaryCashOn}>
+            <Banknote /> Pay on delivery <span>might be available</span>
+          </h2>
+          <h2 className={styles.delivaryExchange}>
+            {" "}
+            <Repeat /> Return & Exchange <span>might be available</span>
+          </h2>
+        </div>
+        <div className={styles.specificationWrapper}>
+          <div className={styles.specifications}>
+            <div className={styles.metarialsDetails}>
+              <div className={styles.left}>
+                <div className={styles.section}>
+                  <h2>Neck</h2>
+                  <p>Round Neck</p>
+                </div>
+                <div className={styles.section}>
+                  <h2>Top Design Styling</h2>
+                  <p>Regular</p>
+                </div>
+                <div className={styles.section}>
+                  <h2>Top Fabric</h2>
+                  <p>Floral</p>
+                </div>
+              </div>
+              <div className={styles.right}>
+                <div className={styles.section}>
+                  <h2>Ornamentation</h2>
+                  <p>Squinned</p>
+                </div>
+                <div className={styles.section}>
+                  <h2>Weave Type</h2>
+                  <p>Machine Weave</p>
+                </div>
+                <div className={styles.section}>
+                  <h2>Bottom Closure</h2>
+                  <p>Drawstring</p>
+                </div>
+                <div className={styles.section}>
+                  <h2>Weave Pattern</h2>
+                  <p>Regular</p>
+                </div>
+              </div>
+            </div>
+            <button className={styles.seeMore}>See more</button>
 
-          {/* Right: Details */}
-          <div className={styles.details}>
-            <div className={styles.titlerating}>
-              <div className={styles.title}>
-                {" "}
-                <h1>{productData.name}</h1>
-                <p>{productData.description}</p>
-              </div>
-              <div className={styles.rating}>
-                4.5
-                <i className="fa-solid fa-star" style={{ color: "orange" }}></i>
-                | 245 Ratings
-              </div>
-            </div>
-            <div className={styles.priceSection}>
-              <div className={styles.price}>
-                ₹{productData.actualPrice}{" "}
-                <span className={styles.originalPrice}>
-                  ₹{productData.originalPrice}
-                </span>
-                <p className={styles.discount}>{productData.discount}% Off</p>
-              </div>
-            </div>
-            {/* Sizes */}
-            <div className={styles.sizes}>
-              <h4>SELECT SIZE </h4>
-              {productData.sizes.map((size) => (
-                <button key={size} className={styles.sizeBtn}>
-                  {size}
-                </button>
-              ))}
-            </div>
-
-            {/* Buy/Add to Cart */}
-            <div className={styles.buttons}>
-              <button className={styles.buyNow}>BUY NOW</button>
-              <button className={styles.addToCart}>ADD TO CART</button>
-            </div>
-
-            <div className={styles.delivery}>
-              <h1 className={styles.deliveryTitle}>
-                DELIVERY OPTIONS <i className="fa-solid fa-truck"></i>{" "}
-              </h1>
-              <div className={styles.inputPin}>
-                <input
-                  placeholder="Enter pincode"
-                  className={styles.inputField}
-                  type="text"
-                />
-                <h3 className={styles.check}>Check</h3>
-              </div>
-              <p>
-                Please enter PIN code to check delivery time & Pay on Delivery
-                Availability
-              </p>
-              <p style={{ display: "flex" }}>
-                100% Original Products Pay on delivery might be available
-                <br />
-                Easy 14 days returns and exchanges
-                <br />
-                BEST OFFERS Best Price: Rs. 599
-                <br />
-                Applicable on: Orders above Rs. 400 (only on first purchase)
-                <br />
-                Coupon code: MYNTRASAVE Coupon Discount: 30% off (Your total
-                saving: Rs. 1900)
-              </p>
-            </div>
             <div className={styles.productDetails}>
-              <div>
-                <h1> PRODUCT DETAILS </h1>
-                <p>
-                  A pair of teal blue solid sports sandals Synthetic upper with
-                  Velcro closure Cushioned footbed Patterned outsole Warranty: 1
-                  month Warranty provided by brand/manufacturer
-                </p>{" "}
-              </div>
-
-              <div>
-                <h1>Material & Care </h1>
-                <p>Synthetic Wipe with a clean, dry cloth to remove dust</p>
-              </div>
-              <div className={styles.specifications}>
-                <h2>Specifications</h2>
-
-                <div className={styles.sections}>
-                  <div className={styles.section}>
-                    <p className={styles.sectionPara}>Type</p>
-                    <h3 className={styles.sectionTitle}>Sports Sandals</h3>
-                  </div>
-                  <div className={styles.section}>
-                    <p className={styles.sectionPara}>Type</p>
-                    <h3 className={styles.sectionTitle}>Sports Sandals</h3>
-                  </div>
-                  <div className={styles.section}>
-                    <p className={styles.sectionPara}>Type</p>
-                    <h3 className={styles.sectionTitle}>Sports Sandals</h3>
-                  </div>
-                  <div className={styles.section}>
-                    <p className={styles.sectionPara}>Type</p>
-                    <h3 className={styles.sectionTitle}>Sports Sandals</h3>
-                  </div>
-                  <div className={styles.section}>
-                    <p className={styles.sectionPara}>Type</p>
-                    <h3 className={styles.sectionTitle}>Sports Sandals</h3>
-                  </div>
-                </div>
-              </div>
+              <h2 className={styles.pDetails}>Product Details</h2>
+              <p>This kurta set consists of kurta, trousers and a dupatta</p>
+            </div>
+            <div className={styles.designSection}>
+              <h2>Kurta Design</h2>
+              <ul>
+                <li>Blue and gold tomed kurta</li>
+                <li>Floral Embroidered</li>
+                <li>Notch Neck</li>
+                <li>Three-quartee, regular sleeves</li>
+                <li>Straigt Shaped</li>
+              </ul>
+            </div>
+            <div className={styles.designSection}>
+              <h2>Kurta Design</h2>
+              <ul>
+                <li>Blue and gold tomed kurta</li>
+                <li>Floral Embroidered</li>
+                <li>Notch Neck</li>
+                <li>Three-quartee, regular sleeves</li>
+                <li>Straigt Shaped</li>
+              </ul>
             </div>
 
-            {/* Reviews */}
+            <div className={styles.sizeFit}>
+              <h2>Size & Fit</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Laudantium odio magni maiores aliquam in quis?
+              </p>
+            </div>
+            <div className={styles.metarialsCare}>
+              <h2>Size & Fit</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Laudantium odio magni maiores aliquam in quis?
+              </p>
+            </div>
           </div>
         </div>
+        <div className={styles.geniuneStamp}></div>
+        <div className={styles.returnInfo}></div>
+        <div className={styles.similarProducts}></div>
+        <div className={styles.sponsoredProducts}></div>
+        <div className={styles.reviewGraph}></div>
+        <div className={styles.reviewsSections}></div>
+        <div className={styles.customerLiked}></div>
+        <div className={styles.customerFevorite}></div>
+        <div className={styles.moreProducts}></div>
+        <div className={styles.moreaboutBonadia}></div>
       </div>
-      {/* Related Products */}
-      <div className={styles.related}>
-        <div className={styles.relatedGrid}>
-          <h2 className={styles.relatedTitle}>Related Products</h2>
-
-          <div className={styles.hCardSection}>
-            {kidcloth.map((link, index) => (
-              <Hcard key={index} link={link} />
-            ))}
-          </div>
-          <div className={styles.productWrapper}>
-            <h1 className={styles.Rtitle}>PEOPLE LOVED THESE</h1>
-
-            <div className={styles.hProductSection}>
-              {kidcloth.map((link, index) => (
-                <Hproduct key={index} link={link} />
-              ))}
-            </div>
-          </div>
-          <div className={styles.productWrapper}>
-            <h1 className={styles.Rtitle}>YOU MAY ALSO LIKE</h1>
-
-            <div className={styles.hProductSection}>
-              {kidcloth.map((link, index) => (
-                <Hproduct button={"none"} key={index} link={link} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.reviews}>
-        <div className={styles.reviewTitle}>RATING & REVIEWS</div>
-        <div className={styles.reviewGraph}>
-          <div className={styles.buyerStar}>
-            <h2 className={styles.numStar}>
-              4.4{" "}
-              <span>
-                <i className="fa-solid fa-star"></i>
-              </span>
-            </h2>{" "}
-            <p className={styles.vTitle}>Verified buyers</p>
-          </div>
-
-          <div className={styles.graphBox}>
-            <div className={styles.graph}>
-              <h1>
-                5<i className="fa-solid fa-star"></i>
-              </h1>
-              <div className={styles.firstBar}></div>
-              <h1>72</h1>
-            </div>
-            <div className={styles.graph}>
-              <h1>
-                4<i className="fa-solid fa-star"></i>
-              </h1>
-              <div className={styles.secondBar}></div>
-              <h1>72</h1>
-            </div>
-            <div className={styles.graph}>
-              <h1>
-                3<i className="fa-solid fa-star"></i>
-              </h1>
-              <div className={styles.thirdBar}></div>
-              <h1>72</h1>
-            </div>
-            <div className={styles.graph}>
-              <h1>
-                2<i className="fa-solid fa-star"></i>
-              </h1>
-              <div className={styles.forthBar}></div>
-              <h1>72</h1>
-            </div>
-            <div className={styles.graph}>
-              <h1>
-                1<i className="fa-solid fa-star"></i>
-              </h1>
-              <div className={styles.fifthBar}></div>
-              <h1>72</h1>
-            </div>
-          </div>
-          <h2 className={styles.bottomLine}></h2>
-        </div>
-        <h3 className={styles.cReviews}>Customer Reviews (112)</h3>
-
-        <div className={styles.reviewsItem}>
-          {Array(2)
-            .fill()
-            .map((_, index) => (
-              <Reviews key={index} />
-            ))}
-          <h3 className={styles.viewAll}>View all Reviews</h3>
-        </div>
-      </div>
-
-      <div className={styles.related}>
-        <div className={styles.relatedGrid}>
-          <h1 className={styles.title}></h1>
-          <div className={styles.productWrapper}>
-            <h1 className={styles.Rtitle}>SPONSORED PRODUCTS</h1>
-
-            <div className={styles.hProductSection}>
-              {kidcloth.map((link, index) => (
-                <Hproduct key={index} link={link} />
-              ))}
-            </div>
-          </div>
-          <div className={styles.productWrapper}>
-            <h1 className={styles.Rtitle}>TRENDING TODAY</h1>
-
-            <div className={styles.hProductSection}>
-              {kidcloth.map((link, index) => (
-                <Hproduct button={"none"} key={index} link={link} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

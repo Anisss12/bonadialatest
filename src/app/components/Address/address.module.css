@@ -8,11 +8,11 @@
   justify-content: space-between;
 }
 .name {
-  font-size: 1.5vh;
+  font-size: small;
   color: var(--highlight-text);
 }
 .place {
-  font-size: 1.5vh;
+  font-size: small;
   padding: 0.5vh 2vh;
   background: var(--background-color);
   border-radius: 2vh;
@@ -25,7 +25,7 @@
   gap: 0.5vh;
 }
 .details h2 {
-  font-size: 1.5vh;
+  font-size: small;
   color: var(--secondary-text);
   font-weight: 400;
 }
@@ -44,7 +44,7 @@
   height: 5vh;
   background: var(--card-bg);
   border: none;
-  font-size: 1.5vh;
+  font-size: small;
   color: rgb(0, 115, 255);
   font-weight: 700;
   display: flex;

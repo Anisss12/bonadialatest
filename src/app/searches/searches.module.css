@@ -42,7 +42,7 @@
 
 .recntSearchh5,
 .wishlisted h5 {
-  font-size: 1.5vh;
+  font-size: small;
   padding: 2vh;
   background: var(--secondary-bg);
   color: var(--highlight-text);

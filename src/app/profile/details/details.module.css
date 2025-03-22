@@ -16,7 +16,7 @@
 }
 .title {
   width: 100%;
-  font-size: 2vh;
+  font-size: medium;
   border-bottom: 0.5px solid var(--border-color);
   padding: 2vh;
   height: 8vh;
@@ -42,7 +42,7 @@
 }
 
 .section h2 {
-  font-size: 2vh;
+  font-size: medium;
   font-weight: 400;
   width: 50%;
   color: var(--secondary-text);
@@ -55,7 +55,7 @@
 
   color: var(--text-color);
   border-radius: 0.5vh;
-  font-size: 2vh;
+  font-size: medium;
   font-weight: 700;
   display: flex;
   justify-content: center;

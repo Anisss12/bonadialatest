@@ -19,7 +19,7 @@
 }
 
 .star h3 {
-  font-size: 1.5vh;
+  font-size: small;
   width: fit-content;
   height: fit-content;
 }
@@ -30,7 +30,7 @@
   align-items: center;
   flex-direction: row;
   gap: 0.5vh;
-  font-size: 2vh;
+  font-size: medium;
   padding: 0.3vh 1vh;
   width: fit-content;
   height: fit-content;
@@ -39,7 +39,7 @@
 }
 
 .icon span i {
-  font-size: 1.5vh;
+  font-size: small;
 }
 
 .nameDate {
@@ -72,7 +72,7 @@
   }
 
   .message {
-    font-size: 1.5vh;
+    font-size: small;
   }
   .starText {
     flex-direction: column;
@@ -81,7 +81,7 @@
   }
 
   .starText h3 {
-    font-size: 2vh;
+    font-size: medium;
     padding: 0.4rem;
     display: flex;
     flex-direction: row;
@@ -92,7 +92,7 @@
     flex-wrap: wrap;
     gap: 0.3rem;
     padding: 0.5rem;
-    font-size: 1.5vh;
+    font-size: small;
   }
   .nameDate {
     font-size: 1vh;

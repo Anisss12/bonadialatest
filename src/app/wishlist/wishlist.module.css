@@ -18,9 +18,9 @@
 }
 .wishlistTitle {
   color: var(--highlight-text);
-  font-size: 2vh;
+  font-size: medium;
 }
 .titlePara p {
   color: var(--text-color);
-  font-size: 1.5vh;
+  font-size: small;
 }

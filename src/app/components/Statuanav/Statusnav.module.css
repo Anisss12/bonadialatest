@@ -28,7 +28,7 @@
     width: 50%;
   }
   .title h2 {
-    font-size: 2vh;
+    font-size: medium;
     font-weight: 400;
   }
   .status {
@@ -37,7 +37,7 @@
     justify-content: right;
   }
   .status h3 {
-    font-size: 1.5vh;
+    font-size: small;
     font-weight: 300;
   }
 }

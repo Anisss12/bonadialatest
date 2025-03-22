@@ -19,12 +19,12 @@
 }
 
 .addNew h2 {
-  font-size: 2vh;
+  font-size: medium;
   color: rgb(0, 115, 255);
 }
 
 .default {
-  font-size: 1.5vh;
+  font-size: small;
   padding: 2vh;
   color: var(--highlight-text);
 }

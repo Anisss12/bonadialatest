@@ -40,7 +40,7 @@
 }
 .filter {
   color: var(--text-color);
-  font-size: 1.5vh;
+  font-size: small;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,7 +62,7 @@
 
 .end {
   height: 5vh;
-  font-size: 2vh;
+  font-size: medium;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,13 +104,13 @@
   color: var(--highlight-text);
 }
 .title h2 {
-  font-size: 2vh;
+  font-size: medium;
   padding-top: 3vh;
 }
 .statusTitle,
 .timeTitle {
   padding: 2vh;
-  font-size: 2vh;
+  font-size: medium;
   color: var(--highlight-text);
 }
 .time,
@@ -129,7 +129,7 @@
 }
 .checkItem h2,
 .titmeItem h2 {
-  font-size: 2vh;
+  font-size: medium;
   font-weight: 400;
   color: var(--text-color);
 }

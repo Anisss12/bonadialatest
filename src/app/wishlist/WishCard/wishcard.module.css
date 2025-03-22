@@ -33,12 +33,12 @@
   padding-top: 2vh;
 }
 .details h3 {
-  font-size: 1.5vh;
+  font-size: small;
   padding-left: 2vh;
   color: var(--highlight-text);
 }
 .details p {
-  font-size: 1.5vh;
+  font-size: small;
   padding-left: 2vh;
   color: var(--text-color);
 }
@@ -67,7 +67,7 @@
   border: none;
   border-top: 1px dotted var(--border-color);
   height: 5vh;
-  font-size: 1.5vh;
+  font-size: small;
   font-weight: 700;
   justify-content: center;
   align-items: center;

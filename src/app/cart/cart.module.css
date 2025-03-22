@@ -25,7 +25,7 @@
 .deliveryStatus {
   background: var(--secondary-bg);
   padding: 2vh;
-  font-size: 1.5vh;
+  font-size: small;
   color: var(--text-color);
 }
 .avilableOffers {
@@ -38,13 +38,13 @@
   color: var(--text-color);
 }
 .avilableOffers h2 {
-  font-size: 1.5vh;
+  font-size: small;
 }
 .avilableOffers p {
-  font-size: 1.5vh;
+  font-size: small;
 }
 .avilableOffers h3 {
-  font-size: 1.5vh;
+  font-size: small;
   color: var(--highlight-text);
 }
 .oprations {
@@ -59,10 +59,10 @@
 }
 
 .oprations h2 {
-  font-size: 1.5vh;
+  font-size: small;
 }
 .oprations p {
-  font-size: 1.5vh;
+  font-size: small;
   color: var(--highlight-text);
   font-weight: 500;
 }
@@ -70,7 +70,7 @@
 .btns {
   display: flex;
   flex-direction: row;
-  font-size: 2vh;
+  font-size: medium;
   width: 30%;
   justify-content: space-around;
 }
@@ -193,7 +193,7 @@
     background: var(--secondary-bg);
     width: 100%;
     padding: 0.8vh;
-    font-size: 1.5vh;
+    font-size: small;
     text-align: center;
     font-weight: 500;
     box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1); /* Top shadow */
@@ -203,7 +203,7 @@
   .checkoutButton {
     width: 90%;
     padding: 20px;
-    font-size: 1.5vh;
+    font-size: small;
     font-weight: 700;
   }
 
@@ -229,7 +229,7 @@
     padding-left: 2vh;
     display: flex;
     flex-direction: row;
-    font-size: 1.5vh;
+    font-size: small;
     gap: 2vh;
     width: 100%;
     overflow-x: scroll;
@@ -244,7 +244,7 @@
     padding-left: 2vh;
     display: flex;
     flex-direction: row;
-    font-size: 1.5vh;
+    font-size: small;
     flex-wrap: nowrap;
     gap: 2vh;
     overflow-x: scroll;
@@ -260,13 +260,13 @@
   .priceDetails {
     background: #fdfdfd;
     padding: 2vh;
-    font-size: 1.5vh;
+    font-size: small;
     gap: 2vh;
     display: flex;
     flex-direction: column;
   }
   .title h2 {
-    font-size: 1.5vh;
+    font-size: small;
     font-weight: 700;
     border-bottom: 0.5px solid #d4d5d9;
     padding-bottom: 2vh;
@@ -277,12 +277,12 @@
   }
   .section h2 {
     width: 70%;
-    font-size: 1.5vh;
+    font-size: small;
     font-weight: 450;
   }
   .section p {
     width: 30%;
-    font-size: 1.5vh;
+    font-size: small;
     text-align: right;
     font-weight: 450;
     color: rgb(6, 160, 45);
@@ -296,7 +296,7 @@
     padding-top: 2vh;
   }
   .totalAmount h2 {
-    font-size: 1.5vh;
+    font-size: small;
   }
   .genuine {
     padding: 2vh;
@@ -323,7 +323,7 @@
     color: gray;
   }
   .iconText h2 {
-    font-size: 1.5vh;
+    font-size: small;
     font-weight: 300;
     text-align: center;
   }
