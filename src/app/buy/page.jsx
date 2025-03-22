@@ -16,7 +16,7 @@ import { Share2 } from "lucide-react";
 const productData = {
   id: 1,
   name: "Premium Sneakers",
-  description: "Stylish and comfortable sneakers for everyday wear.",
+  description: "Stylish and comfortable sneakers for everyday",
   rating: 4.5,
   actualPrice: 879.99,
   originalPrice: 999.99,
@@ -69,18 +69,6 @@ const ProductDetails = () => {
       <Nav2></Nav2>
 
       <div className={styles.container}>
-        <div className={styles.titlerating}>
-          <div className={styles.title}>
-            {" "}
-            <h1>{productData.name}</h1>
-            <p>{productData.description}</p>
-          </div>
-          <div className={styles.rating}>
-            4.5
-            <i className="fa-solid fa-star" style={{ color: "orange" }}></i>|
-            245 Ratings
-          </div>
-        </div>
         <div className={styles.product}>
           {/* Left: Image */}
 
@@ -100,25 +88,32 @@ const ProductDetails = () => {
 
             <div className={styles.whishShare}>
               <i className="fa-regular fa-heart"></i>
-              <Share2 size={30} strokeWidth={2} absoluteStrokeWidth />{" "}
+              <Share2 size={25} strokeWidth={2} absoluteStrokeWidth />{" "}
             </div>
           </div>
 
           {/* Right: Details */}
           <div className={styles.details}>
+            <div className={styles.titlerating}>
+              <div className={styles.title}>
+                {" "}
+                <h1>{productData.name}</h1>
+                <p>{productData.description}</p>
+              </div>
+              <div className={styles.rating}>
+                4.5
+                <i className="fa-solid fa-star" style={{ color: "orange" }}></i>
+                | 245 Ratings
+              </div>
+            </div>
             <div className={styles.priceSection}>
-              <p className={styles.price}>
+              <div className={styles.price}>
                 ₹{productData.actualPrice}{" "}
                 <span className={styles.originalPrice}>
                   ₹{productData.originalPrice}
                 </span>
-              </p>
-              <p className={styles.discount}>{productData.discount}% Off</p>
-              <p className={styles.delivery}>
-                {productData.freeDelivery
-                  ? "✅ Free Delivery"
-                  : "❌ No Free Delivery"}
-              </p>
+                <p className={styles.discount}>{productData.discount}% Off</p>
+              </div>
             </div>
             {/* Sizes */}
             <div className={styles.sizes}>
@@ -127,18 +122,6 @@ const ProductDetails = () => {
                 <button key={size} className={styles.sizeBtn}>
                   {size}
                 </button>
-              ))}
-            </div>
-
-            {/* Colors */}
-            <div className={styles.colors}>
-              <h4>COLOR</h4>
-              {productData.colors.map((color) => (
-                <span
-                  key={color}
-                  className={styles.colorBox}
-                  style={{ backgroundColor: color.toLowerCase() }}
-                ></span>
               ))}
             </div>
 
@@ -164,10 +147,15 @@ const ProductDetails = () => {
                 Please enter PIN code to check delivery time & Pay on Delivery
                 Availability
               </p>
-              <p>
-                100% Original Products Pay on delivery might be available Easy
-                14 days returns and exchanges BEST OFFERS Best Price: Rs. 599
+              <p style={{ display: "flex" }}>
+                100% Original Products Pay on delivery might be available
+                <br />
+                Easy 14 days returns and exchanges
+                <br />
+                BEST OFFERS Best Price: Rs. 599
+                <br />
                 Applicable on: Orders above Rs. 400 (only on first purchase)
+                <br />
                 Coupon code: MYNTRASAVE Coupon Discount: 30% off (Your total
                 saving: Rs. 1900)
               </p>
@@ -217,23 +205,29 @@ const ProductDetails = () => {
             {/* Reviews */}
           </div>
         </div>
-
-        {/* Related Products */}
-        <div className={styles.related}>
+      </div>
+      {/* Related Products */}
+      <div className={styles.related}>
+        <div className={styles.relatedGrid}>
           <h2 className={styles.relatedTitle}>Related Products</h2>
-          <div className={styles.relatedGrid}>
-            <div className={styles.hCardSection}>
-              {kidcloth.map((link, index) => (
-                <Hcard key={index} link={link} />
-              ))}
-            </div>
-            <h1 className={styles.title}>You may like</h1>
+
+          <div className={styles.hCardSection}>
+            {kidcloth.map((link, index) => (
+              <Hcard key={index} link={link} />
+            ))}
+          </div>
+          <div className={styles.productWrapper}>
+            <h1 className={styles.Rtitle}>PEOPLE LOVED THESE</h1>
+
             <div className={styles.hProductSection}>
               {kidcloth.map((link, index) => (
                 <Hproduct key={index} link={link} />
               ))}
             </div>
-            <h1 className={styles.title}>You may like</h1>
+          </div>
+          <div className={styles.productWrapper}>
+            <h1 className={styles.Rtitle}>YOU MAY ALSO LIKE</h1>
+
             <div className={styles.hProductSection}>
               {kidcloth.map((link, index) => (
                 <Hproduct button={"none"} key={index} link={link} />
@@ -241,84 +235,91 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-        <div className={styles.reviews}>
-          <div className={styles.reviewTitle}>RATING & REVIEWS</div>
-          <div className={styles.reviewGraph}>
-            <div className={styles.buyerStar}>
-              <h2 className={styles.numStar}>
-                4.4{" "}
-                <span>
-                  <i className="fa-solid fa-star"></i>
-                </span>
-              </h2>{" "}
-              <p className={styles.vTitle}>Verified buyers</p>
-            </div>
-
-            <div className={styles.graphBox}>
-              <div className={styles.graph}>
-                <h1>
-                  5<i className="fa-solid fa-star"></i>
-                </h1>
-                <div className={styles.firstBar}></div>
-                <h1>72</h1>
-              </div>
-              <div className={styles.graph}>
-                <h1>
-                  4<i className="fa-solid fa-star"></i>
-                </h1>
-                <div className={styles.secondBar}></div>
-                <h1>72</h1>
-              </div>
-              <div className={styles.graph}>
-                <h1>
-                  3<i className="fa-solid fa-star"></i>
-                </h1>
-                <div className={styles.thirdBar}></div>
-                <h1>72</h1>
-              </div>
-              <div className={styles.graph}>
-                <h1>
-                  2<i className="fa-solid fa-star"></i>
-                </h1>
-                <div className={styles.forthBar}></div>
-                <h1>72</h1>
-              </div>
-              <div className={styles.graph}>
-                <h1>
-                  1<i className="fa-solid fa-star"></i>
-                </h1>
-                <div className={styles.fifthBar}></div>
-                <h1>72</h1>
-              </div>
-            </div>
-            <h2 className={styles.bottomLine}></h2>
+      </div>
+      <div className={styles.reviews}>
+        <div className={styles.reviewTitle}>RATING & REVIEWS</div>
+        <div className={styles.reviewGraph}>
+          <div className={styles.buyerStar}>
+            <h2 className={styles.numStar}>
+              4.4{" "}
+              <span>
+                <i className="fa-solid fa-star"></i>
+              </span>
+            </h2>{" "}
+            <p className={styles.vTitle}>Verified buyers</p>
           </div>
-          <h3 className={styles.cReviews}>Customer Reviews (112)</h3>
 
-          <div className={styles.reviewsItem}>
-            {Array(2)
-              .fill()
-              .map((_, index) => (
-                <Reviews key={index} />
-              ))}
-            <h3 className={styles.viewAll}>View all Reviews</h3>
+          <div className={styles.graphBox}>
+            <div className={styles.graph}>
+              <h1>
+                5<i className="fa-solid fa-star"></i>
+              </h1>
+              <div className={styles.firstBar}></div>
+              <h1>72</h1>
+            </div>
+            <div className={styles.graph}>
+              <h1>
+                4<i className="fa-solid fa-star"></i>
+              </h1>
+              <div className={styles.secondBar}></div>
+              <h1>72</h1>
+            </div>
+            <div className={styles.graph}>
+              <h1>
+                3<i className="fa-solid fa-star"></i>
+              </h1>
+              <div className={styles.thirdBar}></div>
+              <h1>72</h1>
+            </div>
+            <div className={styles.graph}>
+              <h1>
+                2<i className="fa-solid fa-star"></i>
+              </h1>
+              <div className={styles.forthBar}></div>
+              <h1>72</h1>
+            </div>
+            <div className={styles.graph}>
+              <h1>
+                1<i className="fa-solid fa-star"></i>
+              </h1>
+              <div className={styles.fifthBar}></div>
+              <h1>72</h1>
+            </div>
           </div>
+          <h2 className={styles.bottomLine}></h2>
+        </div>
+        <h3 className={styles.cReviews}>Customer Reviews (112)</h3>
+
+        <div className={styles.reviewsItem}>
+          {Array(2)
+            .fill()
+            .map((_, index) => (
+              <Reviews key={index} />
+            ))}
+          <h3 className={styles.viewAll}>View all Reviews</h3>
         </div>
       </div>
 
       <div className={styles.related}>
         <div className={styles.relatedGrid}>
-          <h1 className={styles.title}>SPONSORED PRODUCTS</h1>
-          <div className={styles.hProductSection}>
-            {kidcloth.map((link, index) => (
-              <Hproduct key={index} link={link} />
-            ))}
+          <h1 className={styles.title}></h1>
+          <div className={styles.productWrapper}>
+            <h1 className={styles.Rtitle}>SPONSORED PRODUCTS</h1>
+
+            <div className={styles.hProductSection}>
+              {kidcloth.map((link, index) => (
+                <Hproduct key={index} link={link} />
+              ))}
+            </div>
           </div>
-          <h1 className={styles.title}>You may like</h1>
-          <div className={styles.hProductSection}>
-            {kidcloth.map((link, index) => (
-              <Hproduct button={"none"} key={index} link={link} />
-            ))}
+          <div className={styles.productWrapper}>
+            <h1 className={styles.Rtitle}>TRENDING TODAY</h1>
+
+            <div className={styles.hProductSection}>
+              {kidcloth.map((link, index) => (
+                <Hproduct button={"none"} key={index} link={link} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
