@@ -61,15 +61,6 @@ const Page = async () => {
 
     {
       component: (
-        <div className={styles.vcardSection}>
-          <Slider />
-        </div>
-      ),
-      key: "slider",
-    },
-
-    {
-      component: (
         <div className={styles.mincardSection}>
           {kidcloth.map((link, index) => (
             <Minicard link={link} key={index} />
@@ -104,6 +95,14 @@ const Page = async () => {
     {
       component: <div className={styles.hcardSection}></div>,
       key: "empty-card",
+    },
+    {
+      component: (
+        <div className={styles.vcardSection}>
+          <Slider />
+        </div>
+      ),
+      key: "slider",
     },
     { component: <TabBar />, key: "tabbar" },
   ];

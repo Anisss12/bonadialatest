@@ -18,6 +18,8 @@ import {
   Package,
   Banknote,
   Repeat,
+  ShieldCheck,
+  Stamp,
 } from "lucide-react";
 
 // Hardcoded Product Data
@@ -129,110 +131,262 @@ const ProductDetails = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className={styles.delivarySection}>
-          <h2 className={styles.delivaryTitle}>Check Delivary</h2>
-          <input type="text" placeholder="Enter Pin Code" />
-          <h2 className={styles.delivaryExpress}>
-            <Package /> Express delivery <span>might be available</span>
-          </h2>
-          <h2 className={styles.delivaryCashOn}>
-            <Banknote /> Pay on delivery <span>might be available</span>
-          </h2>
-          <h2 className={styles.delivaryExchange}>
-            {" "}
-            <Repeat /> Return & Exchange <span>might be available</span>
-          </h2>
-        </div>
-        <div className={styles.specificationWrapper}>
-          <div className={styles.specifications}>
-            <div className={styles.metarialsDetails}>
-              <div className={styles.left}>
-                <div className={styles.section}>
-                  <h2>Neck</h2>
-                  <p>Round Neck</p>
+
+          <div className={styles.delivarySection}>
+            <h2 className={styles.delivaryTitle}>Check Delivary</h2>
+            <input type="text" placeholder="Enter Pin Code" />
+            <h2 className={styles.delivaryExpress}>
+              <Package size={20} /> Express delivery{" "}
+              <span>might be available</span>
+            </h2>
+            <h2 className={styles.delivaryCashOn}>
+              <Banknote size={20} /> Pay on delivery{" "}
+              <span>might be available</span>
+            </h2>
+            <h2 className={styles.delivaryExchange}>
+              {" "}
+              <Repeat size={20} /> Return & Exchange{" "}
+              <span>might be available</span>
+            </h2>
+          </div>
+          <div className={styles.specificationWrapper}>
+            <div className={styles.specifications}>
+              <div className={styles.metarialsDetails}>
+                <div className={styles.left}>
+                  <div className={styles.section}>
+                    <h2>Neck</h2>
+                    <p>Round Neck</p>
+                  </div>
+                  <div className={styles.section}>
+                    <h2>Top Design Styling</h2>
+                    <p>Regular</p>
+                  </div>
+                  <div className={styles.section}>
+                    <h2>Top Fabric</h2>
+                    <p>Floral</p>
+                  </div>
                 </div>
-                <div className={styles.section}>
-                  <h2>Top Design Styling</h2>
-                  <p>Regular</p>
-                </div>
-                <div className={styles.section}>
-                  <h2>Top Fabric</h2>
-                  <p>Floral</p>
+                <div className={styles.right}>
+                  <div className={styles.section}>
+                    <h2>Ornamentation</h2>
+                    <p>Squinned</p>
+                  </div>
+                  <div className={styles.section}>
+                    <h2>Weave Type</h2>
+                    <p>Machine Weave</p>
+                  </div>
+                  <div className={styles.section}>
+                    <h2>Bottom Closure</h2>
+                    <p>Drawstring</p>
+                  </div>
+                  <div className={styles.section}>
+                    <h2>Weave Pattern</h2>
+                    <p>Regular</p>
+                  </div>
                 </div>
               </div>
-              <div className={styles.right}>
-                <div className={styles.section}>
-                  <h2>Ornamentation</h2>
-                  <p>Squinned</p>
-                </div>
-                <div className={styles.section}>
-                  <h2>Weave Type</h2>
-                  <p>Machine Weave</p>
-                </div>
-                <div className={styles.section}>
-                  <h2>Bottom Closure</h2>
-                  <p>Drawstring</p>
-                </div>
-                <div className={styles.section}>
-                  <h2>Weave Pattern</h2>
-                  <p>Regular</p>
-                </div>
+              <button className={styles.seeMore}>See more</button>
+
+              <div className={styles.productDetails}>
+                <h2 className={styles.pDetails}>Product Details</h2>
+                <p>This kurta set consists of kurta, trousers and a dupatta</p>
               </div>
-            </div>
-            <button className={styles.seeMore}>See more</button>
+              <div className={styles.designSection}>
+                <h2>Kurta Design</h2>
+                <ul>
+                  <li>Blue and gold tomed kurta</li>
+                  <li>Floral Embroidered</li>
+                  <li>Notch Neck</li>
+                  <li>Three-quartee, regular sleeves</li>
+                  <li>Straigt Shaped</li>
+                </ul>
+              </div>
+              <div className={styles.designSection}>
+                <h2>Kurta Design</h2>
+                <ul>
+                  <li>Blue and gold tomed kurta</li>
+                  <li>Floral Embroidered</li>
+                  <li>Notch Neck</li>
+                  <li>Three-quartee, regular sleeves</li>
+                  <li>Straigt Shaped</li>
+                </ul>
+              </div>
 
-            <div className={styles.productDetails}>
-              <h2 className={styles.pDetails}>Product Details</h2>
-              <p>This kurta set consists of kurta, trousers and a dupatta</p>
-            </div>
-            <div className={styles.designSection}>
-              <h2>Kurta Design</h2>
-              <ul>
-                <li>Blue and gold tomed kurta</li>
-                <li>Floral Embroidered</li>
-                <li>Notch Neck</li>
-                <li>Three-quartee, regular sleeves</li>
-                <li>Straigt Shaped</li>
-              </ul>
-            </div>
-            <div className={styles.designSection}>
-              <h2>Kurta Design</h2>
-              <ul>
-                <li>Blue and gold tomed kurta</li>
-                <li>Floral Embroidered</li>
-                <li>Notch Neck</li>
-                <li>Three-quartee, regular sleeves</li>
-                <li>Straigt Shaped</li>
-              </ul>
-            </div>
-
-            <div className={styles.sizeFit}>
-              <h2>Size & Fit</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Laudantium odio magni maiores aliquam in quis?
-              </p>
-            </div>
-            <div className={styles.metarialsCare}>
-              <h2>Size & Fit</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Laudantium odio magni maiores aliquam in quis?
-              </p>
+              <div className={styles.sizeFit}>
+                <h2>Size & Fit</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Laudantium odio magni maiores aliquam in quis?
+                </p>
+              </div>
+              <div className={styles.metarialsCare}>
+                <h2>Size & Fit</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Laudantium odio magni maiores aliquam in quis?
+                </p>
+              </div>
             </div>
           </div>
+          <div className={styles.geniuneStamp}>
+            <div className={styles.genuine}>
+              <ShieldCheck
+                style={{
+                  border: "3px solid var(--highlight-text)",
+                  padding: "1vh",
+                  borderRadius: "5vh",
+                  background: "var(--secondary-bg)",
+                }}
+                strokeWidth={1.5}
+                size={70}
+              />
+              <h2>Genuine</h2>
+              <h2>Product</h2>
+            </div>
+            <div className={styles.quality}>
+              <Stamp
+                style={{
+                  border: "3px solid var(--highlight-text)",
+                  padding: "1vh",
+                  borderRadius: "5vh",
+                  background: "var(--secondary-bg)",
+                }}
+                strokeWidth={1.5}
+                size={70}
+              />
+              <h2>Quality</h2>
+              <h2>Checked</h2>
+            </div>
+          </div>
+          <div className={styles.returnInfo}>
+            <h2>Easy 14 days returns and exchages</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, aut
+              voluptatum quia
+            </p>
+          </div>
+          <div className={styles.similarProducts}>
+            <h2>Fastest Selling Similar Product</h2>
+            <h2>Don't miss out on these in-demand products</h2>
+            <div className={styles.productSlide}>
+              {kidcloth.map((item, index) => (
+                <Hproduct link={item} key={index}></Hproduct>
+              ))}
+            </div>
+          </div>
+          <div className={styles.sponsoredProducts}>
+            <h2>Sponsores todays products</h2>
+            <div className={styles.productSlide}>
+              {kidcloth.map((item, index) => (
+                <Hproduct button={"none"} link={item} key={index}></Hproduct>
+              ))}
+            </div>
+          </div>
+          <div className={styles.similarProducts}>
+            <h2>Similar Product</h2>
+            <div className={styles.productSlide}>
+              {kidcloth.map((item, index) => (
+                <Hproduct link={item} key={index}></Hproduct>
+              ))}
+            </div>
+          </div>
+          <div className={styles.reviewGraph}>
+            <h2 className={styles.reviewTitle}>Rating & Reviews</h2>
+            <p className={styles.reviewPara}>
+              <ShieldCheck strokeWidth={1} />
+              By Verified Buyers Only
+            </p>
+
+            <div className={styles.graphBox}>
+              <div className={styles.starNumber}>
+                <h2>
+                  4.4 <span>★ </span>
+                </h2>
+                <p>98 Verified Buyers</p>
+              </div>
+              <div className={styles.graphBars}>
+                <div className={styles.bar}>
+                  <h2>
+                    {" "}
+                    5 <span>★ </span>
+                  </h2>
+                  <div className={styles.line}></div>
+                  <h2>
+                    68 <ChevronRight strokeWidth={0.75} />
+                  </h2>
+                </div>
+                <div className={styles.bar}>
+                  <h2>
+                    {" "}
+                    4 <span>★ </span>
+                  </h2>
+                  <div className={styles.line}></div>
+                  <h2>
+                    68 <ChevronRight strokeWidth={0.75} />
+                  </h2>
+                </div>
+                <div className={styles.bar}>
+                  <h2>
+                    {" "}
+                    3 <span>★ </span>
+                  </h2>
+                  <div className={styles.line}></div>
+                  <h2>
+                    68 <ChevronRight strokeWidth={0.75} />
+                  </h2>
+                </div>
+                <div className={styles.bar}>
+                  <h2>
+                    {" "}
+                    2 <span>★ </span>
+                  </h2>
+                  <div className={styles.line}></div>
+                  <h2>
+                    68 <ChevronRight strokeWidth={0.75} />
+                  </h2>
+                </div>
+                <div className={styles.bar}>
+                  <h2>
+                    {" "}
+                    1 <span>★ </span>
+                  </h2>
+                  <div className={styles.line}></div>
+                  <h2>
+                    68 <ChevronRight strokeWidth={0.75} />
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.reviewsSections}>
+            <h2 className={styles.reviewTitle}>Customer reviews (112)</h2>
+            <div className={styles.reviewsList}>
+              <Reviews></Reviews>
+              <Reviews></Reviews>
+            </div>
+            <h2 className={styles.viewAll}>
+              View all reviews <ChevronRight strokeWidth={0.75} />
+            </h2>
+          </div>
+          <div className={styles.customerLiked}>
+            <h2 className={styles.likedTitle}>Customer Liked</h2>
+            <div className={styles.productSlide}>
+              {kidcloth.map((item, index) => (
+                <Hproduct link={item} key={index}></Hproduct>
+              ))}
+            </div>
+          </div>
+          <div className={styles.customerLiked}>
+            <h2 className={styles.likedTitle}>Customer favorit</h2>
+            <div className={styles.productSlide}>
+              {kidcloth.map((item, index) => (
+                <Hproduct button={"none"} link={item} key={index}></Hproduct>
+              ))}
+            </div>
+          </div>
+          <div className={styles.moreProducts}></div>
+          <div className={styles.moreaboutBonadia}></div>
         </div>
-        <div className={styles.geniuneStamp}></div>
-        <div className={styles.returnInfo}></div>
-        <div className={styles.similarProducts}></div>
-        <div className={styles.sponsoredProducts}></div>
-        <div className={styles.reviewGraph}></div>
-        <div className={styles.reviewsSections}></div>
-        <div className={styles.customerLiked}></div>
-        <div className={styles.customerFevorite}></div>
-        <div className={styles.moreProducts}></div>
-        <div className={styles.moreaboutBonadia}></div>
       </div>
     </>
   );

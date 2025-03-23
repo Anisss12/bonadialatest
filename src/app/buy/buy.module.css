@@ -8,13 +8,13 @@
   box-sizing: border-box;
   overflow: hidden;
   line-height: 3vh;
+  padding-bottom: 5vh;
 }
 
 .container {
   padding-top: 8vh;
   display: flex;
   flex-direction: column;
-  gap: 2vh;
   width: 100%;
   overflow: hidden;
 }
@@ -199,6 +199,7 @@
   align-items: center;
   gap: 1vh;
   width: 100vw;
+  padding-top: 2vh;
 }
 
 .delivaryExpress span {
@@ -242,6 +243,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 6vh;
 }
 
 .specifications {
@@ -364,5 +366,188 @@
   font-size: medium;
 }
 .metarialsCare p {
+  font-size: small;
+}
+
+.geniuneStamp {
+  padding: 2vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+}
+
+.genuine,
+.quality {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--secondary-text);
+}
+
+.geniuneStamp h2 {
+  font-size: medium;
+  font-weight: 350;
+}
+
+.returnInfo {
+  padding: 2vh;
+}
+
+.returnInfo h2 {
+  font-size: small;
+  color: var(--text-color);
+}
+
+.returnInfo p {
+  font-size: small;
+  color: var(--secondary-text);
+  font-weight: 350;
+}
+
+.similarProducts {
+  padding: 2vh;
+}
+
+.sponsoredProducts {
+  padding: 0vh 2vh;
+}
+.sponsoredProducts h2,
+.similarProducts h2 {
+  font-size: small;
+  color: var(--text-color);
+}
+
+.similarProducts h2:nth-child(2) {
+  font-size: x-small;
+  color: var(--highlight-text2);
+}
+
+.productSlide {
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  white-space: nowrap;
+  gap: 1vh;
+  height: fit-content;
+  scrollbar-width: none;
+  padding-bottom: 2vh;
+}
+
+.productSlide > * {
+  min-width: 40%; /* Adjust as needed */
+}
+
+.reviewGraph {
+  padding: 2vh;
+}
+
+.reviewTitle {
+  font-size: medium;
+}
+
+.reviewPara {
+  color: green;
+  font-size: small;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.graphBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.starNumber {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vh;
+  border-right: 1px solid var(--border-color);
+  padding: 2vh;
+}
+
+.starNumber h2 {
+  font-size: 5vh;
+  display: flex;
+}
+.starNumber p {
+  font-size: x-small;
+  display: flex;
+  width: 100%;
+  font-weight: 500;
+}
+
+.starNumber h2 span {
+  font-size: large;
+  color: green;
+}
+
+.graphBars {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 2vh;
+}
+
+.bar h2 {
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5vh;
+}
+.line {
+  width: 70%;
+  height: 0.5vh;
+  background: var(--border-color);
+  border-radius: 1vh;
+  position: relative;
+}
+
+.line::before {
+  content: "";
+  width: 60%;
+  height: 0.5vh;
+  background: green;
+  border-radius: 1vh;
+  position: absolute;
+  left: 0vh;
+  bottom: 0vh;
+}
+
+.reviewsSections {
+  padding: 2vh;
+}
+
+.reviewTitle {
+  font-size: small;
+}
+.viewAll {
+  color: var(--highlight-text);
+  display: flex;
+  align-items: center;
+  font-size: medium;
+}
+
+.customerLiked {
+  padding: 2vh;
+}
+
+.likedTitle {
   font-size: small;
 }

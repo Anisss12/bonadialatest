@@ -9,7 +9,14 @@ const ProductCard = ({ product, link, button }) => {
     <Link href={"/buy"} className={styles.card}>
       {/* Left Side - Image */}
       <div className={styles.imageContainer}>
-        {"29" && <span className={styles.badge}>20% OFF</span>}
+        {"29" && (
+          <span
+            style={{ display: button === "none" ? "flex" : "none" }}
+            className={styles.badge}
+          >
+            20% OFF
+          </span>
+        )}
         <Image
           width={500}
           height={500}
@@ -18,14 +25,17 @@ const ProductCard = ({ product, link, button }) => {
           className={styles.image}
         />
         <div className={styles.rating}>
-          <h4>⭐ 4.6</h4>
+          <h4>
+            {" "}
+            4.6 <span>★</span>
+          </h4>
         </div>
       </div>
 
       {/* Right Side - Details */}
       <div className={styles.content}>
         <h2 className={styles.title}>Product name</h2>
-        <p className={styles.para}>Lorem ipsum dolor sit...</p>
+        <p className={styles.para}>Lorem ipsum dolor...</p>
 
         {/* Rating */}
 
