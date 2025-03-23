@@ -36,14 +36,14 @@
   justify-content: center;
   align-items: center;
   gap: 2vw;
-  color: white;
+  color: var(--text-color);
 }
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--text-color);
   margin-right: 0vw;
 }
 .advertise {
@@ -54,7 +54,7 @@
 }
 .menuLink {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   font-weight: 800;
 }
 

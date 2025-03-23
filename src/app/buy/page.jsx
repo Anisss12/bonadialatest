@@ -98,12 +98,16 @@ const ProductDetails = () => {
               </h2>
             </div>
           </div>
-          <div className={styles.cuponSection}>
-            <h2>
-              Best price <span>Rs. 1,699</span>with coupon <span>FLAT 300</span>
-              <ChevronRight />
-            </h2>
-            <h2>Add to cart and save Rs. 300</h2>
+
+          <div className={styles.couponWrapper}>
+            <div className={styles.cuponSection}>
+              <h2>
+                Best price <span>Rs. 1,699</span>with coupon{" "}
+                <span>FLAT 300</span>
+                <ChevronRight />
+              </h2>
+              <h2>Add to cart and save Rs. 300</h2>
+            </div>
           </div>
           <div className={styles.actions}>
             <div className={styles.selectSize}>
