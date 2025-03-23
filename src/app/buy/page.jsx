@@ -20,7 +20,11 @@ import {
   Repeat,
   ShieldCheck,
   Stamp,
+  BadgePercent,
+  ChevronDown,
+  Ratio,
 } from "lucide-react";
+import HomeHead from "../components/HomeHead/HomeHead";
 
 // Hardcoded Product Data
 const productData = {
@@ -81,6 +85,18 @@ const ProductDetails = () => {
         <div className={styles.container}>
           <div className={styles.imageContainer}>
             <Buyslide></Buyslide>
+            <div className={styles.rating}>
+              <h2>
+                {" "}
+                4.4 <span>★</span> <span>98</span>
+              </h2>
+            </div>
+
+            <div className={styles.viewSimilar}>
+              <h2>
+                <Ratio strokeWidth={0.75} /> View Similar
+              </h2>
+            </div>
           </div>
           <div className={styles.titleDescription}>
             <div className={styles.titlePara}>
@@ -94,21 +110,45 @@ const ProductDetails = () => {
             </div>
             <div className={styles.priceDiscount}>
               <h2>
-                MRP Rs. 6,449 <span>1,999</span> <span>60% OFF!</span>
+                MRP ₹ 6,449 <span>₹ 1,999</span> <span>60% OFF!</span>
               </h2>
             </div>
           </div>
 
           <div className={styles.couponWrapper}>
             <div className={styles.cuponSection}>
+              <div className={styles.couponBox}>
+                <h2>
+                  Best price <span>₹1,699</span>with coupon{" "}
+                  <span>FLAT 300</span>
+                  <ChevronRight />
+                </h2>
+              </div>
               <h2>
-                Best price <span>Rs. 1,699</span>with coupon{" "}
-                <span>FLAT 300</span>
-                <ChevronRight />
+                Add to cart and save ₹ 300{" "}
+                <span>
+                  <ShoppingCart size={15} strokeWidth={1} /> ₹ 0/ ₹ 1,399
+                </span>
               </h2>
-              <h2>Add to cart and save Rs. 300</h2>
             </div>
           </div>
+
+          <div className={styles.offersWrapper}>
+            <div className={styles.offers}>
+              <h2>
+                {" "}
+                <BadgePercent strokeWidth={2} />
+                Offers
+              </h2>
+              <h2>Bank Offers</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis,
+                magni? Lorem ipsum dolor sit amet.
+              </p>
+              <button> More Offers</button>
+            </div>
+          </div>
+
           <div className={styles.actions}>
             <div className={styles.selectSize}>
               <h2>Select Size</h2>
@@ -189,7 +229,9 @@ const ProductDetails = () => {
                   </div>
                 </div>
               </div>
-              <button className={styles.seeMore}>See more</button>
+              <button className={styles.seeMore}>
+                See more <ChevronRight />
+              </button>
 
               <div className={styles.productDetails}>
                 <h2 className={styles.pDetails}>Product Details</h2>
@@ -372,6 +414,11 @@ const ProductDetails = () => {
               View all reviews <ChevronRight strokeWidth={0.75} />
             </h2>
           </div>
+
+          <div className={styles.banner}>
+            <HomeHead></HomeHead>
+          </div>
+
           <div className={styles.customerLiked}>
             <h2 className={styles.likedTitle}>Customer Liked</h2>
             <div className={styles.productSlide}>
@@ -388,8 +435,27 @@ const ProductDetails = () => {
               ))}
             </div>
           </div>
-          <div className={styles.moreProducts}></div>
-          <div className={styles.moreaboutBonadia}></div>
+          <div className={styles.moreProductsWrapper}>
+            <div className={styles.moreProducts}>
+              <h2>
+                More Kurta Sets Sangaria{" "}
+                <ChevronRight className={styles.arrow} strokeWidth={2} />
+              </h2>
+              <h2>
+                More Blue Kurta Sets{" "}
+                <ChevronRight className={styles.arrow} strokeWidth={2} />
+              </h2>
+              <h2>
+                More Kurta Sets{" "}
+                <ChevronRight className={styles.arrow} strokeWidth={2} />
+              </h2>
+            </div>
+          </div>
+          <div className={styles.moreaboutBonadia}>
+            <p>
+              More about shopping at bonadia <ChevronDown strokeWidth={1} />
+            </p>
+          </div>
         </div>
       </div>
     </>

@@ -17,15 +17,54 @@
   flex-direction: column;
   width: 100%;
   overflow: hidden;
-  gap: 1vh;
 }
 
 .imageContainer {
   height: 60vh;
-
+  position: relative;
   width: 100%;
 }
 
+.rating {
+  position: absolute;
+  bottom: 8vh;
+  right: 2vh;
+  background: white;
+  border-radius: 2vh;
+  padding: 0.5vh 2vh;
+
+  display: flex;
+}
+
+.rating h2 {
+  font-size: small;
+}
+
+.rating span:nth-child(1) {
+  color: green;
+}
+.rating span:nth-child(2) {
+  border-left: 1px solid var(--border-color);
+  padding-left: 1vh;
+}
+
+.viewSimilar {
+  position: absolute;
+  bottom: 8vh;
+  left: 2vh;
+  background: white;
+  border-radius: 2vh;
+  padding: 0.5vh 2vh;
+  align-items: center;
+  display: flex;
+}
+
+.viewSimilar h2 {
+  font-size: small;
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
 .titleDescription {
   display: flex;
   flex-direction: column;
@@ -67,12 +106,16 @@
   font-size: small;
 }
 
+.priceDiscount span:nth-child(1) {
+  text-decoration: line-through;
+  color: var(--secondary-text);
+}
 .couponWrapper {
   width: 100%;
   padding: 2vh;
 }
 .cuponSection {
-  padding: 1vh 2vh;
+  padding: 2vh 2vh;
   background: var(--secondary-bg);
   display: flex;
   flex-direction: column;
@@ -81,13 +124,63 @@
 }
 
 .cuponSection h2 {
-  font-size: medium;
+  font-size: small;
   font-weight: 350;
   color: var(--secondary-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5vh;
+  justify-content: space-between;
 }
 
+.couponBox {
+  display: flex;
+  flex-direction: row;
+}
 .cuponSection h2 span {
   font-weight: 700;
+}
+
+.offersWrapper {
+  padding: 2vh;
+}
+.offers {
+  border: 1px solid var(--border-color);
+  padding: 2vh;
+  border-radius: 3vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.offers h2:nth-child(1) {
+  display: flex;
+  font-size: large;
+  flex-direction: row;
+  color: var(--text-color);
+  gap: 1vh;
+  align-items: center;
+}
+.offers h2:nth-child(2) {
+  display: flex;
+  font-size: medium;
+  color: var(--text-color);
+}
+
+.offers p {
+  font-size: small;
+  color: var(--secondary-text);
+  font-weight: 400;
+  padding-left: 3vh;
+}
+
+.offers button {
+  width: fit-content;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--highlight-text);
+  font-weight: 700;
+  padding-left: 3vh;
 }
 
 .actions {
@@ -317,6 +410,9 @@
   font-weight: 400;
   font-size: medium;
   color: var(--highlight-text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .productDetails {
@@ -550,10 +646,56 @@
   font-size: medium;
 }
 
+.banner {
+  height: 8vh;
+  overflow: hidden;
+  display: flex;
+  border-radius: 2vh;
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .customerLiked {
   padding: 2vh;
 }
 
 .likedTitle {
   font-size: small;
+}
+
+.moreProductsWrapper {
+  padding: 2vh;
+}
+
+.moreProducts {
+  border: 1px solid var(--border-color);
+  border-radius: 3vh;
+  padding: 0vh 2vh;
+}
+
+.moreProducts h2 {
+  padding: 2.5vh;
+  font-size: medium;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  justify-content: space-between;
+}
+
+.arrow {
+  color: var(--highlight-text);
+}
+
+.moreaboutBonadia {
+  padding: 2vh;
+}
+
+.moreaboutBonadia p {
+  font-size: medium;
+  display: flex;
+  align-items: center;
 }

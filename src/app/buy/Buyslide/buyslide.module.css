@@ -52,4 +52,7 @@
 
 .dotActive {
   background-color: #e41b7b;
+  height: 1vh;
+  width: 1vh;
+  border-radius: 2vh;
 }
